@@ -1,0 +1,30 @@
+$fontFamilyCursive: 'cursive';
+$fontFamilyBody: 'arial', sans-serif;
+
+@font-face {
+  font-family: $fontFamilyCursive;
+  src: url('./fonts/brannboll.otf') format('opentype'),
+}
+
+$fontSize1: 2.5rem;
+$fontSize2: 1.8rem;
+$fontSize3: 1.5rem;
+$fontSize4: 1rem;
+$fontSize5: 0.8rem;
+
+@mixin bodyText {
+  font-family: $fontFamilyBody;
+  font-size: $fontSize4;
+}
+
+@mixin titleText {
+  font-family: $fontFamilyBody;
+  font-weight: bold;
+  font-size: $fontSize1;
+}
+
+@mixin subtitleText {
+  font-family: $fontFamilyBody;
+  font-weight: bold;
+  font-size: $fontSize2;
+}

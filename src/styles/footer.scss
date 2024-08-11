@@ -1,0 +1,48 @@
+@use "sass/all";
+
+#page-footer {
+  @include all.flex-row();
+  padding: all.$spaceLarge all.$spaceMedium;
+  border-bottom: 2px solid all.$primaryLight;
+  color: all.$white;
+
+  .top-section {
+    @include all.flex-row();
+    justify-content: space-between;
+    margin-bottom: all.$spaceExtraLarge;
+
+    .nav {
+      a {
+        @include all.hover-cta()
+      }
+    }
+
+    .contact {
+      $size: 32px;
+      a {
+        height: $size;
+        width: $size;
+        border-radius: 50%;
+        background-color: all.$primaryExtraLight;
+        display: inline-block;
+        margin-left: all.$spaceExtraSmall;
+      }
+    }
+  }
+
+  .bottom-section {
+    text-align: center;
+    margin-bottom: all.$spaceLarge;
+
+    p {
+      margin-top: all.$spaceSmall;
+    }
+  }
+
+  .copyright {
+    padding: all.$spaceMedium;
+    background-color: all.$primaryExtraDark;
+    color: all.$primaryExtraLight;
+  }
+
+}

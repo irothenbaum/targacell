@@ -1,0 +1,31 @@
+/* Basic utility colors */
+
+$black: #040203;
+$darkGrey: #666767;
+$grey: #a6a1a9;
+$lightGrey: #cad8e0;
+$nearWhite: #eef4f5;
+$white: #ffffff;
+
+$shadowExtraSoft: rgba($black, 0.10);
+$shadowSoft: rgba($black, .15);
+$shadow: rgba($black, 0.50);
+$shadowHard: rgba($black, 0.80);
+$shadowExtraHard: rgba($black, 0.90);
+
+$sunbeamExtraSoft: rgba($white, 0.10);
+$sunbeamSoft: rgba($white, .15);
+$sunbeam: rgba($white, 0.50);
+$sunbeamHard: rgba($white, 0.80);
+
+
+
+$bodyColor: $darkGrey;
+$tileColor: $primaryDark;
+$linkColor: $primary;
+
+$primaryExtraLight: #9ab8c4;
+$primaryLight: #6492a6;
+$primary: #3e7993;
+$primaryDark: #264b5a;
+$primaryExtraDark: #083441;

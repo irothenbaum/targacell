@@ -1,0 +1,20 @@
+@use "sass/all";
+
+#page-header {
+  @include all.flex-row();
+  padding: all.$spaceLarge;
+  border-bottom: 2px solid all.$primaryLight;
+
+  .nav {
+    margin-left: all.$spaceMedium;
+
+    a {
+      color: all.$bodyColor;
+      @include all.hover-cta()
+    }
+  }
+
+  .contact {
+    margin-left: all.$spaceMedium;
+  }
+}

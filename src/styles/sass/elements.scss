@@ -1,0 +1,12 @@
+@use './colors';
+@use './constants';
+
+@mixin hover-cta {
+  cursor: pointer;
+  opacity: 0.9;
+  transition: opacity constants.$transition;
+
+  &:hover {
+    opacity: 1;
+  }
+}
