@@ -1,5 +1,7 @@
 @use "sass/reset.css";
 @use "sass/all";
+@use "components/header";
+@use "components/footer";
 
 // UNIVERSAL BOX SIZING
 *, *:before, *:after {

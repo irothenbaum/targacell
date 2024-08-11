@@ -1,4 +1,4 @@
-@use "sass/all";
+@use "../sass/all";
 
 #page-header {
   @include all.flex-row();

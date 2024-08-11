@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{% block title %}Isaac Rothenbaum Portfolio Site{% endblock %}</title>
+    <title>{% block title %}TargaCell{% endblock %}</title>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" type="image/svg+xml" href="/static/img/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     {% block robots %}
         <meta name="robots" content="index follow" />
     {% endblock %}
-
-    {% block favicon %}
-        <!-- When we get a real favicon, check out https://realfavicongenerator.net/ -->
-    {%  endblock %}
 
     {% block styles %}
         <link rel="stylesheet" href="./styles/base.css"/>
@@ -24,16 +19,16 @@
 <body class="{{ site.environment }}">
     {% block page %}
         {% block header %}
-            {% include('header.twig') %}
+            {% embed 'header.twig' %} {% endembed %}
         {% endblock %}
-        {% block content-wrapper %}
+        {% block content_wrapper %}
             <div id="content">
                 {% block content %}
                 {% endblock %}
             </div>
         {% endblock %}
         {% block footer %}
-            {% include('footer.twig') %}
+            {% embed 'footer.twig' %} {% endembed %}
         {% endblock %}
     {% endblock %}
 

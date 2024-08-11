@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node server/index.js",
-    "build-styles": "node node_modules/sass/sass.js server/sass:public/css",
-    "watch-styles": "node node_modules/sass/sass.js --watch server/sass:public/css"
+    "watch-styles": "node node_modules/sass/sass.js --watch server/sass:public/css",
+    "deploy": "node scripts/deploySite.js",
+    "build-pages": "node scripts/runScript.js compilePages",
+    "build-styles": "node scripts/runScript.js compileStyles",
+    "copy-assets": "node scripts/runScript.js copyAssets"
   },
   "author": "",
   "license": "ISC",

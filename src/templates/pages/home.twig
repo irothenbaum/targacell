@@ -1,4 +1,8 @@
-{% extends "./default.twig" %}
+{% extends "../default.twig" %}
+
+{% block styles %}
+{{ parent() }}
+{% endblock %}
 
 {% block content %}
     <div id="hero">
@@ -8,10 +12,6 @@
 
         <div id="hero-bottom">
             <h2><span id="animate-type">just kidding</span><span class="slow-pulse"></span></h2>
-        </div>
-
-        <div id="down-arrow">
-            {% include "../../public/img/chevron_down.svg" %}
         </div>
     </div>
 {% endblock %}
