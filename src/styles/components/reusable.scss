@@ -1,0 +1,28 @@
+@use "../sass/all";
+
+.content-width {
+  width: 100%;
+  max-width: all.$contentWidth;
+  margin: 0 auto;
+}
+
+.outer-content-width {
+  width: 100%;
+  max-width: all.$outerContentWidth;
+  margin: 0 auto;
+}
+
+.button {
+  display: inline-block;
+  min-width: 200px;
+  text-transform: uppercase;
+  color: all.$white;
+  background-color: all.$primaryLight;
+  padding: all.$spaceSmall all.$spaceMedium;
+  cursor: pointer;
+  transition: background-color all.$transition;
+
+  &:hover {
+    background-color: all.$primaryExtraLight;
+  }
+}

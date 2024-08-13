@@ -2,16 +2,199 @@
 
 {% block styles %}
 {{ parent() }}
+    <link rel="stylesheet" href="./styles/home.css"/>
 {% endblock %}
 
-{% block content %}
+{% block scripts %}
+{{ parent() }}
+    <script src="./scripts/home.js"></script>
+{% endblock %}
+
+{% block content_wrapper %}
     <div id="hero">
-        <div>
-            <h1>404<span>Not Found</span></h1>
+        <div class="content-width">
+            <div class="hero-inner">
+                <h1>TargaCell</h1>
+                <h3>
+                    A non-invasive stem cell delivery system using
+                    proprietary proteins to repair damaged hearts
+                    <nobr>& control</nobr> damaging immune responses
+                </h3>
+
+                <a href="/contact" class="button">Learn more about our approach</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-width">
+
+        <div class="tiles-container">
+            <div class="tile" data-match-heights="tiles">
+                <i class="fas fa-heart"></i>
+                <p>Universal delivery technology</p>
+            </div>
+            <div class="tile" data-match-heights="tiles">
+                <i class="fas fa-heart"></i>
+                <p>Safe &amp; efficient process</p>
+            </div>
+            <div class="tile" data-match-heights="tiles">
+                <i class="fas fa-heart"></i>
+                <p>Stem cell delivery</p>
+            </div>
+            <div class="tile" data-match-heights="tiles">
+                <i class="fas fa-heart"></i>
+                <p>Download executive summary</p>
+            </div>
         </div>
 
-        <div id="hero-bottom">
-            <h2><span id="animate-type">just kidding</span><span class="slow-pulse"></span></h2>
+        <div class="section title-stitch">
+            <img src="./images/logotype.png" />
+            <h2>Innovative Universal Delivery Technology</h2>
+        </div>
+
+        <div class="section discover">
+            <div>
+                <h2>What is TargaCell?</h2>
+                <p>
+                    TargaCell is a stem cell delivery company
+                    that can deliver 10X more stem cells to the
+                    heart and retain them there to dramatically
+                    improve the repair of damaged heart
+                    tissue resulting from a heart attack.
+                </p>
+
+                <p>
+                    –Catherine Phillips, PhD CEO/CSO
+                </p>
+
+                <img src="./images/home/signature.jpg" />
+
+                <p>
+                    [Read The Welcome Letter from our CEO]
+                </p>
+            </div>
+
+            <div>
+                <img src="./images/home/cathy_headshot.jpg" />
+            </div>
+
+            <div>
+                <h2>Discover Us</h2>
+                <p>
+                    Our biologics dampen the concurrent
+                    inflammatory immune responses that
+                    impede the regenerative process,
+                    promoting organ repair.
+                </p>
+
+                <h3><span id="counter">0</span>X</h3>
+                <p>
+                    Proprietary biologics that deliver 10X the
+                    number of stem cells.
+                </p>
+
+                <h3>13M</h3>
+                <p>
+                    Over $8.5M investment by federal, private,
+                    academic grants and innovator
+                    contributions.
+                </p>
+            </div>
+        </div>
+
+        <div class="section three-cards">
+            <div data-match-heights="three-cards">
+                <i class="fas fa-heart"></i>
+                <h3>The Problem</h3>
+                <div class="small-divider"></div>
+                <p>
+                    The initial focus is addressing cellular
+                    therapy’s major impediment to
+                    completely repairing damage from a
+                    heart attack and preventing
+                    progression to heart failure and
+                    death: It is that not enough stem cells
+                    are delivered and retained in the
+                    heart to make repair efficient!
+                </p>
+            </div>
+
+            <div data-match-heights="three-cards">
+                <i class="fas fa-heart"></i>
+                <h3>The Solution</h3>
+                <div class="small-divider"></div>
+                <p>
+                    TargaCell developed and is refining
+                    an efficient stem cell delivery
+                    technology using our proprietary
+                    biologics that deliver 10X the number
+                    of stem cells to the heart and retain
+                    them long enough to repair damage
+                    and restore function. TargaCell’s
+                    compounds are first-in-class,
+                    premium biologics.
+                </p>
+            </div>
+
+            <div data-match-heights="three-cards">
+                <i class="fas fa-scale-unbalanced"></i>
+                <h3>Intellectual Property</h3>
+                <div class="small-divider"></div>
+                <p>
+                    TargaCell owns its intellectual
+                    property portfolio for its biologic
+                    products consisting of two issued
+                    patents, with additional discoveries
+                    in early stages of development.
+                    Complementing TargaCell’s trade
+                    secrets, we are pursuing a
+                    biologics regulatory strategy
+                    to attain 12-year market exclusivity
+                    in US and EU.
+                </p>
+            </div>
+        </div>
+
+        <div class="section corporation">
+            <img src="./images/home/building.jpg" />
+            <div>
+                <img src="./images/heart.png" />
+                <h3>TargaCell Corporation</h3>
+                <p>
+                    TargaCell Corporation, a Chicago-based
+                    biotech, is dedicated to repairing organ
+                    damage caused by disease to recover function
+                    & restore quality of life through improved
+                    non-invasive, targeted delivery of regenerative
+                    cells to specific organs.
+                </p>
+                <a class="button" href="./team.html" target="_blank"> Meet the Team </a>
+            </div>
+        </div>
+
+        <div class="section testimonials">
+            <h3>Testimonials About TargaCell</h3>
+            <p class="cursive">Testimonials</p>
+            <div class="wrapper">
+                <img src="./images/heart.png" />
+                <div class="gallery">
+                    <div class="testimonial">
+                        <p class="quote">
+                            <span class="quotations">The [TargaCell] non-invasive delivery procedure would make it much easier to enroll patients [in clinical trials].</span>
+                            Regarding current methods,
+                            <span class="quotations">…where [do] these cells go once they are injected into the [heart] wall because clearly most of them don’t remain there for very long.</span>
+                        </p>
+                        <p class="attribution">
+                            Gary Schaer, MD, <br/>
+                            <span>Professor Cardiology & Director of Translational Medicine Research, Rush University, Chicago, IL</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+            </div>
         </div>
     </div>
 {% endblock %}

@@ -6,25 +6,28 @@ $fontFamilyBody: 'arial', sans-serif;
   src: url('./fonts/brannboll.otf') format('opentype'),
 }
 
-$fontSize1: 2.5rem;
-$fontSize2: 1.8rem;
-$fontSize3: 1.5rem;
+$fontSize1: 3rem;
+$fontSize2: 2rem;
+$fontSize3: 1.4rem;
 $fontSize4: 1rem;
 $fontSize5: 0.8rem;
 
 @mixin bodyText {
   font-family: $fontFamilyBody;
   font-size: $fontSize4;
+  line-height: 1.3em;
 }
 
 @mixin titleText {
   font-family: $fontFamilyBody;
   font-weight: bold;
   font-size: $fontSize1;
+  line-height: 1em;
 }
 
 @mixin subtitleText {
   font-family: $fontFamilyBody;
   font-weight: bold;
   font-size: $fontSize2;
+  line-height: 1em;
 }

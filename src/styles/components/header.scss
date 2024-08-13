@@ -1,20 +1,58 @@
 @use "../sass/all";
 
 #page-header {
-  @include all.flex-row();
-  padding: all.$spaceLarge;
-  border-bottom: 2px solid all.$primaryLight;
+  width: 100%;
+  border-bottom: 4px solid all.$primaryLight;
+
+  & > .outer-content-width {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    align-items: flex-end;
+    padding: all.$spaceLarge;
+
+    @media screen and (max-width: all.$screenSmallMax) {
+      flex-direction: column;
+    }
+  }
+
+  img {
+    height: all.$spaceMediumLarge;
+  }
 
   .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
     margin-left: all.$spaceMedium;
 
     a {
+      margin-left: all.$spaceMedium;
       color: all.$bodyColor;
-      @include all.hover-cta()
+      flex: 1;
+      @include all.hover-cta();
+
+      &:first-child {
+        margin-left: 0;
+      }
     }
   }
 
   .contact {
     margin-left: all.$spaceMedium;
+
+    .what-are-stem-cells {
+      padding: all.$spaceExtraSmall all.$spaceSmall;
+      border: 2px solid all.$primaryLight;
+      text-transform: uppercase;
+      margin-left: all.$spaceSmall;
+      transition: background-color all.$transition;
+
+      &:hover {
+        background-color: all.$lightGrey;
+      }
+    }
   }
 }

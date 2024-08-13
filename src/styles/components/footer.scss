@@ -1,46 +1,77 @@
 @use "../sass/all";
 
 #page-footer {
-  @include all.flex-row();
-  padding: all.$spaceLarge all.$spaceMedium;
-  border-bottom: 2px solid all.$primaryLight;
+  width:100%;
+  overflow: hidden;
+  background-color: all.$primaryDark;
   color: all.$white;
 
   .top-section {
+    padding: all.$spaceLarge all.$spaceMedium;
     @include all.flex-row();
     justify-content: space-between;
     margin-bottom: all.$spaceExtraLarge;
 
     .nav {
       a {
-        @include all.hover-cta()
+        @include all.hover-cta();
+        margin-left: all.$spaceSmall;
       }
     }
 
     .contact {
-      $size: 32px;
+      $size: 42px;
+
       a {
+        @include all.hover-cta();
         height: $size;
         width: $size;
+        line-height: $size;
+        text-align: center;
         border-radius: 50%;
         background-color: all.$primaryExtraLight;
         display: inline-block;
+        font-size: all.$fontSize3;
         margin-left: all.$spaceExtraSmall;
+
+        &.poland {
+          margin-left: all.$spaceMedium;
+          background-color: #b33237;
+          position: relative;
+
+          &:after {
+            content: "POLAND";
+            text-transform: uppercase;
+            position: absolute;
+            bottom: - $size * .75;
+            left: -50%;
+            width: 200%;
+            overflow: visible;
+            font-size: all.$fontSize5;
+          }
+        }
       }
     }
   }
 
   .bottom-section {
     text-align: center;
-    margin-bottom: all.$spaceLarge;
+
+    img {
+      margin: 0 auto;
+      height: all.$spaceExtraLarge
+    }
 
     p {
-      margin-top: all.$spaceSmall;
+      margin-top: all.$spaceMedium;
     }
   }
 
   .copyright {
-    padding: all.$spaceMedium;
+    margin-top: all.$spaceExtraLarge;
+    text-align: center;
+    font-size: all.$fontSize5;
+    padding: all.$spaceMediumLarge;
     background-color: all.$primaryExtraDark;
     color: all.$primaryExtraLight;
   }

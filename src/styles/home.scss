@@ -1,0 +1,265 @@
+@use "sass/all";
+
+#hero {
+  height: 90vh;
+  width: 100%;
+  background: url('../images/home/hero_background.png') center center no-repeat;
+  background-size: cover;
+
+  & > .content-width {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+  }
+
+  .hero-inner {
+    color: all.$white;
+    max-width: 66%;
+    margin-bottom: all.$spaceExtraExtraLarge;
+
+    h1 {
+      @include all.titleText();
+      font-size: 4.5rem;
+    }
+
+    h3 {
+      @include all.subtitleText();
+        margin: all.$spaceLarge 0;
+      line-height: 1.2em;
+    }
+  }
+}
+
+.tiles-container {
+  @include all.flex-row();
+  transform: translateY(-50%);
+  margin-bottom: - all.$spaceExtraExtraLarge;
+
+  & > .tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: all.$spaceMedium;
+    color: all.$white;
+    flex: 1;
+    font-size: all.$fontSize3;
+
+    i {
+      font-size: all.$fontSize1;
+    }
+
+    p {
+      margin: all.$spaceMedium 0 all.$spaceLarge;
+      line-height: 1.3em;
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-4px);
+      transition: transform all.$transition;
+    }
+
+    &:nth-child(1) {
+      background-color: all.$primary;
+    }
+
+    &:nth-child(2) {
+      background-color: all.$primaryExtraLight;
+      color: all.$primaryExtraDark;
+    }
+
+    &:nth-child(3) {
+      background-color: all.$primaryDark;
+    }
+
+    &:nth-child(4) {
+      background-color: all.$primaryExtraDark;
+    }
+  }
+}
+
+.section {
+  margin: all.$spaceExtraExtraLarge auto;
+  text-align: center;
+}
+
+.title-stitch {
+  text-align: center;
+
+  img {
+    height: all.$spaceExtraLarge;
+    margin-bottom: all.$spaceExtraLarge;
+    display: inline-block;
+  }
+
+  h2 {
+    @include all.titleText();
+    color: all.$primaryDark;
+  }
+}
+
+.discover {
+  @include all.flex-row();
+  align-items: flex-start;
+  gap: all.$spaceMedium;
+
+  & > div {
+    width: 100%;
+    text-align: left;
+
+    h2 {
+      @include all.subtitleText();
+      color: all.$primaryDark;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      @include all.subtitleText();
+      color: all.$primary;
+      margin-top: all.$spaceLarge;
+    }
+
+    p {
+      margin: all.$spaceMedium 0;
+    }
+
+    &:first-child img {
+      width: 90%;
+      margin-bottom: all.$spaceExtraLarge;
+    }
+  }
+}
+
+.three-cards {
+  @include all.flex-row();
+  justify-content: space-evenly;
+  gap: all.$spaceMedium;
+
+  & > div {
+    width: 100%;
+    background-color: all.$nearWhite;
+    color: all.$bodyColor;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: all.$spaceExtraLarge all.$spaceLarge;
+
+    i {
+      font-size: 3rem;
+    }
+
+    h3 {
+      margin-top: all.$spaceMedium;
+    }
+
+    .small-divider {
+      width: 1rem;
+      height: 2px;
+      background-color: all.$bodyColor;
+      margin: all.$spaceSmall auto;
+    }
+
+    &:nth-child(1) {
+      background-color: all.$primary;
+      color: all.$white;
+      .small-divider {
+        background-color: all.$white;
+      }
+    }
+  }
+}
+
+.corporation {
+  @include all.flex-row();
+  overflow: hidden;
+  justify-content: space-between;
+  padding: all.$spaceLarge;
+
+  & > img {
+    width: 60%;
+  }
+
+  & > div {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    margin-left: -20%;
+    background-color: all.$primaryDark;
+    color: all.$white;
+    text-align: center;
+    padding: all.$spaceLarge;
+
+    img {
+      width: 82%;
+      margin: 0 auto;
+    }
+
+    h3 {
+      @include all.subtitleText();
+      margin-top: all.$spaceMedium;
+      text-align: left;
+    }
+
+    p {
+      margin-top: all.$spaceSmall;
+      text-align: left;
+    }
+
+    a {
+      width: 100%;
+      margin-top: all.$spaceMedium;
+    }
+  }
+}
+
+.testimonials {
+  background-color: all.$nearWhite;
+  padding: all.$spaceLarge;
+  text-align: center;
+
+  h3 {
+    @include all.subtitleText();
+    color: all.$primaryExtraDark;
+  }
+
+  p.cursive {
+    font-size: 6rem;
+    color: all.$lightGrey;
+    font-family: all.$fontFamilyCursive;
+    line-height: 1em;
+  }
+
+  .wrapper {
+    margin-top: all.$spaceLarge;
+    display: flex;
+
+    img {
+      height: 8rem;
+      margin-right: all.$spaceLarge;
+      flex: 0;
+    }
+
+    .gallery {
+      width: 100%;
+      flex: 1;
+
+      .testimonial {
+        text-align: left;
+
+        p.quote {
+          font-size: all.$fontSize3;
+          line-height: 1.3em;
+        }
+        p.attribution {
+          margin-top: all.$spaceSmall;
+
+          span {
+            font-size: all.$fontSize5;
+          }
+        }
+      }
+    }
+  }
+}

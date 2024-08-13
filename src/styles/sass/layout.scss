@@ -1,10 +1,10 @@
-$spaceExtraExtraLarge: 5rem;
-$spaceExtraLarge: 3rem;
-$spaceLarge: 2rem;
-$spaceMediumLarge: 1.5rem;
-$spaceMedium: 1rem;
-$spaceSmall: 0.5rem;
-$spaceExtraSmall: 0.25rem;
+$spaceExtraExtraLarge: 8rem;
+$spaceExtraLarge: 4rem;
+$spaceLarge: 2.8rem;
+$spaceMediumLarge: 1.8rem;
+$spaceMedium: 1.3rem;
+$spaceSmall: 0.7rem;
+$spaceExtraSmall: 0.3rem;
 $spaceExtraExtraSmall: 0.12rem;
 
 $screenSmallMin: 0px;
@@ -15,6 +15,7 @@ $screenLargeMin: 1025px;
 $screenLargeMax: 1440px;
 
 $contentWidth: $screenMediumMax;
+$outerContentWidth: $screenLargeMax;
 
 $borderRadiusExtraLarge: 20px;
 $borderRadiusLarge: 10px;

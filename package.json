@@ -9,7 +9,8 @@
     "deploy": "node scripts/deploySite.js",
     "build-pages": "node scripts/runScript.js compilePages",
     "build-styles": "node scripts/runScript.js compileStyles",
-    "copy-assets": "node scripts/runScript.js copyAssets"
+    "copy-assets": "node scripts/runScript.js copyAssets",
+    "build-site": "node scripts/runScript.js buildSite"
   },
   "author": "",
   "license": "ISC",
