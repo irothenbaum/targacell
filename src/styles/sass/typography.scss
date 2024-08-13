@@ -3,7 +3,7 @@ $fontFamilyBody: 'arial', sans-serif;
 
 @font-face {
   font-family: $fontFamilyCursive;
-  src: url('./fonts/brannboll.otf') format('opentype'),
+  src: url('../fonts/brannboll.otf') format('opentype');
 }
 
 $fontSize1: 3rem;

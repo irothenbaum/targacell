@@ -3,7 +3,7 @@
 #hero {
   height: 90vh;
   width: 100%;
-  background: url('../images/home/hero_background.png') center center no-repeat;
+  background: url('../images/home/hero_background.png') all.$primary center center no-repeat;
   background-size: cover;
 
   & > .content-width {
@@ -228,7 +228,8 @@
     font-size: 6rem;
     color: all.$lightGrey;
     font-family: all.$fontFamilyCursive;
-    line-height: 1em;
+    line-height: 1.25em;
+    transform: translateY(0.25em);
   }
 
   .wrapper {
@@ -246,11 +247,40 @@
       flex: 1;
 
       .testimonial {
+        display:none;
+
+        &.active {
+          display: block;
+        }
+
         text-align: left;
 
         p.quote {
           font-size: all.$fontSize3;
           line-height: 1.3em;
+
+          span.quotations {
+            position: relative;
+            padding: 0 all.$spaceSmall;
+
+            &:first-child {
+              padding-left: 0;
+            }
+            &:last-child {
+              padding-right: 0;
+            }
+
+            &:before, &:after {
+              content: '\201C';
+              font-size: 6rem;
+              color: all.$primary;
+              vertical-align: -3rem;
+              line-height: 0;
+            }
+            &:after {
+              content: '\201D';
+            }
+          }
         }
         p.attribution {
           margin-top: all.$spaceSmall;
@@ -259,6 +289,33 @@
             font-size: all.$fontSize5;
           }
         }
+      }
+    }
+  }
+  .gallery-dots {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: all.$spaceMedium;
+
+    $dotSize: 1rem;
+
+    .dot {
+      cursor: pointer;
+      height: $dotSize;
+      width: $dotSize;
+      background-color: transparent;
+      border: 2px solid all.$primary;
+      border-radius: 50%;
+      margin-right: all.$spaceSmall;
+
+      &.active {
+        background-color: all.$primary;
+      }
+
+      &:last-child {
+        margin-right: 0;
       }
     }
   }
