@@ -21,8 +21,16 @@
         {% block header %}
             {% embed 'header.twig' %} {% endembed %}
         {% endblock %}
+        {% block breadcrumbs %}
+            <div class="breadcrumbs">
+                <div class="outer-content-width">
+                    <a href="./">Home</a>
+                    {% block breadcrumbs_content %}{% endblock %}
+                </div>
+            </div>
+        {% endblock %}
         {% block content_wrapper %}
-            <div id="content">
+            <div id="content" class="content-width">
                 {% block content %}
                 {% endblock %}
             </div>

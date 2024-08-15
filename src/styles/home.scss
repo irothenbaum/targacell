@@ -1,10 +1,12 @@
 @use "sass/all";
+@use "components/icon_card";
 
 #hero {
-  height: 90vh;
+  height: 85vh;
   width: 100%;
   background: url('../images/home/hero_background.png') all.$primary center center no-repeat;
   background-size: cover;
+  border-top: 4px solid all.$primaryLight;
 
   & > .content-width {
     display: flex;
@@ -25,8 +27,8 @@
 
     h3 {
       @include all.subtitleText();
-        margin: all.$spaceLarge 0;
-      line-height: 1.2em;
+      margin: all.$spaceLarge 0;
+      line-height: 1.25em;
     }
   }
 }
@@ -52,7 +54,7 @@
 
     p {
       margin: all.$spaceMedium 0 all.$spaceLarge;
-      line-height: 1.3em;
+      line-height: all.$bodyLineHeight;
       text-transform: uppercase;
     }
 
@@ -79,11 +81,6 @@
       background-color: all.$primaryExtraDark;
     }
   }
-}
-
-.section {
-  margin: all.$spaceExtraExtraLarge auto;
-  text-align: center;
 }
 
 .title-stitch {
@@ -138,37 +135,7 @@
   justify-content: space-evenly;
   gap: all.$spaceMedium;
 
-  & > div {
-    width: 100%;
-    background-color: all.$nearWhite;
-    color: all.$bodyColor;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: all.$spaceExtraLarge all.$spaceLarge;
 
-    i {
-      font-size: 3rem;
-    }
-
-    h3 {
-      margin-top: all.$spaceMedium;
-    }
-
-    .small-divider {
-      width: 1rem;
-      height: 2px;
-      background-color: all.$bodyColor;
-      margin: all.$spaceSmall auto;
-    }
-
-    &:nth-child(1) {
-      background-color: all.$primary;
-      color: all.$white;
-      .small-divider {
-        background-color: all.$white;
-      }
-    }
-  }
 }
 
 .corporation {
@@ -248,16 +215,15 @@
 
       .testimonial {
         display:none;
+        text-align: left;
 
         &.active {
           display: block;
         }
 
-        text-align: left;
-
         p.quote {
           font-size: all.$fontSize3;
-          line-height: 1.3em;
+          line-height: all.$bodyLineHeight;
 
           span.quotations {
             position: relative;

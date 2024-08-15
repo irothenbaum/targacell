@@ -1,0 +1,56 @@
+@use "sass/all";
+@use "components/icon_card";
+
+.section:first-child {
+  margin-top: all.$spaceExtraLarge;
+}
+
+.intro-heart {
+  @include all.flex-row();
+
+  img {
+    width: 40%;
+    margin-left: all.$spaceMedium;
+  }
+
+  div {
+    text-align: left;
+    width: 100%;
+
+    h2 {
+      @include all.subtitleText();
+    }
+
+    p {
+      margin-top: all.$spaceMedium;
+    }
+  }
+}
+
+.technology {
+  .row {
+    @include all.flex-row();
+    gap: all.$spaceMedium;
+    margin-bottom: all.$spaceMedium;
+
+    & > p {
+      padding-left: all.$spaceMedium;
+      font-size: all.$fontSize3;
+      text-align: left;
+      line-height: all.$bodyLineHeight;
+    }
+  }
+
+  & > img {
+    width: 100%;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.what-is-targacell {
+  .row {
+    @include all.flex-row();
+    gap: all.$spaceMedium;
+    margin-bottom: all.$spaceMedium;
+  }
+}

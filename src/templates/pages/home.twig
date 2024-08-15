@@ -10,6 +10,8 @@
     <script src="./scripts/home.js"></script>
 {% endblock %}
 
+{% block breadcrumbs %}{% endblock %}
+
 {% block content_wrapper %}
     <div id="hero">
         <div class="content-width">
@@ -27,7 +29,6 @@
     </div>
 
     <div class="content-width">
-
         <div class="tiles-container">
             <div class="tile" data-match-heights="tiles">
                 <i class="fas fa-heart"></i>
@@ -103,10 +104,12 @@
         </div>
 
         <div class="section three-cards">
-            <div data-match-heights="three-cards">
-                <i class="fas fa-heart"></i>
-                <h3>The Problem</h3>
-                <div class="small-divider"></div>
+            {% embed '../components/icon_card.twig' with {
+                'match_heights': 'three-cards',
+                title: 'The Problem',
+                icon: 'fa-heart',
+            } %}
+                {% block body %}
                 <p>
                     The initial focus is addressing cellular
                     therapy’s major impediment to
@@ -117,42 +120,49 @@
                     are delivered and retained in the
                     heart to make repair efficient!
                 </p>
-            </div>
+                {% endblock %}
+            {% endembed %}
 
-            <div data-match-heights="three-cards">
-                <i class="fas fa-heart"></i>
-                <h3>The Solution</h3>
-                <div class="small-divider"></div>
-                <p>
-                    TargaCell developed and is refining
-                    an efficient stem cell delivery
-                    technology using our proprietary
-                    biologics that deliver 10X the number
-                    of stem cells to the heart and retain
-                    them long enough to repair damage
-                    and restore function. TargaCell’s
-                    compounds are first-in-class,
-                    premium biologics.
-                </p>
-            </div>
+            {% embed '../components/icon_card.twig' with {
+                'match_heights': 'three-cards',
+                title: 'The Solution',
+                icon: 'fa-heart',
+            } %}
+                {% block body %}
+                    <p>
+                        TargaCell developed and is refining
+                        an efficient stem cell delivery
+                        technology using our proprietary
+                        biologics that deliver 10X the number
+                        of stem cells to the heart and retain
+                        them long enough to repair damage
+                        and restore function. TargaCell’s
+                        compounds are first-in-class,
+                        premium biologics.
+                    </p>
+                {% endblock %}
+            {% endembed %}
 
-            <div data-match-heights="three-cards">
-                <i class="fas fa-scale-unbalanced"></i>
-                <h3>Intellectual Property</h3>
-                <div class="small-divider"></div>
-                <p>
-                    TargaCell owns its intellectual
-                    property portfolio for its biologic
-                    products consisting of two issued
-                    patents, with additional discoveries
-                    in early stages of development.
-                    Complementing TargaCell’s trade
-                    secrets, we are pursuing a
-                    biologics regulatory strategy
-                    to attain 12-year market exclusivity
-                    in US and EU.
-                </p>
-            </div>
+            {% embed '../components/icon_card.twig' with {
+                'match_heights': 'three-cards',
+                title: 'The Solution',
+                icon: 'fa-scale-unbalanced',
+            } %}
+                {% block body %}
+                    <p>
+                        TargaCell owns its intellectual
+                        property portfolio for its biologic
+                        products consisting of two issued
+                        patents, with additional discoveries
+                        in early stages of development.
+                        Complementing TargaCell’s trade
+                        secrets, we are pursuing a
+                        biologics regulatory strategy
+                        to attain 12-year market exclusivity
+                        in US and EU.
+                    </p>
+                {% endblock %}
+            {% endembed %}
         </div>
 
         <div class="section corporation">

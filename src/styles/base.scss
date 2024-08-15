@@ -12,7 +12,7 @@
 html, body {
   font-size: 14px;
   font-family: all.$fontFamilyBody;
-  line-height: 1.3em;
+  line-height: all.$bodyLineHeight;
   width: 100%;
   height: 100%;
   color: all.$bodyColor;
@@ -21,8 +21,21 @@ html, body {
 
 
 #content {
-  padding: all.$spaceLarge all.$spaceMedium;
   margin: 0 auto;
   max-width: all.$contentWidth;
   min-height: 100vh;
+}
+
+.breadcrumbs {
+  width: 100%;
+  padding: all.$spaceMediumLarge;
+  background-color: all.$nearWhite;
+
+  a {
+    @include all.hover-cta();
+    &:after {
+      content: '>';
+      margin: 0 all.$spaceSmall;
+    }
+  }
 }

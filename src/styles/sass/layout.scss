@@ -1,11 +1,11 @@
 $spaceExtraExtraLarge: 8rem;
 $spaceExtraLarge: 4rem;
 $spaceLarge: 2.8rem;
-$spaceMediumLarge: 1.8rem;
-$spaceMedium: 1.3rem;
-$spaceSmall: 0.7rem;
-$spaceExtraSmall: 0.3rem;
-$spaceExtraExtraSmall: 0.12rem;
+$spaceMediumLarge: 2rem;
+$spaceMedium: 1.5rem;
+$spaceSmall: 1rem;
+$spaceExtraSmall: 0.5rem;
+$spaceExtraExtraSmall: 0.2rem;
 
 $screenSmallMin: 0px;
 $screenSmallMax: 600px;
@@ -58,7 +58,7 @@ $borderRadiusSmall: 4px;
   align-items: center;
   flex-direction: row;
 
-  @media screen and (max-width: $breakPoint) {
-    flex-direction: column;
-  }
+  //@media screen and (max-width: $breakPoint) {
+  //  flex-direction: column;
+  //}
 }
