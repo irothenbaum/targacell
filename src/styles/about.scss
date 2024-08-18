@@ -1,5 +1,6 @@
 @use "sass/all";
-@use "components/icon_card";
+@use "components/icon-card";
+@use "components/bio-card";
 
 .section:first-child {
   margin-top: all.$spaceExtraLarge;
@@ -27,30 +28,98 @@
   }
 }
 
+.row {
+  @include all.flex-row();
+  gap: all.$spaceMedium;
+  margin-bottom: all.$spaceMedium;
+}
+
 .technology {
   .row {
-    @include all.flex-row();
-    gap: all.$spaceMedium;
-    margin-bottom: all.$spaceMedium;
-
-    & > p {
+    div:last-child > p {
       padding-left: all.$spaceMedium;
       font-size: all.$fontSize3;
       text-align: left;
       line-height: all.$bodyLineHeight;
     }
+
+    & > * {
+      flex: 1 1 0;
+    }
   }
 
   & > img {
+    margin-top: all.$spaceLarge;
     width: 100%;
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1);
   }
 }
 
+.image {
+  @include all.div-image();
+  padding-top: 0;
+}
+
 .what-is-targacell {
-  .row {
-    @include all.flex-row();
-    gap: all.$spaceMedium;
+  display: flex;
+
+  & > div.left {
+    position: relative;
+    flex: 0;
+    .year-text {
+      font-size: 18rem;
+      line-height: 0.7em;
+      opacity: 0.05;
+      color: all.$primaryDark;
+    }
+
+    .text-over {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+      h2 {
+        margin-top: all.$spaceLarge;
+        text-align: left;
+        text-transform: uppercase;
+        color: all.$primaryDark;
+        @include all.subtitleText();
+      }
+
+      p {
+        margin-top: all.$spaceMediumLarge;
+        text-align: left;
+      }
+    }
+
+  }
+
+  & > div.right {
+    width: 100%;
+    flex: 1;
+    padding-left: all.$spaceMedium;
+    text-align: center;
+
+    div.icon-card {
+      padding: all.$spaceMedium all.$spaceSmall all.$spaceLarge;
+    }
+
+    .image {
+      padding-top: 33%;
+      height: 0 !important;
+    }
+  }
+}
+
+.meet-the-team {
+  h2 {
+    @include all.titleText();
     margin-bottom: all.$spaceMedium;
   }
+
+  .section {
+    @include all.flex-row();
+  }
+
 }

@@ -35,78 +35,87 @@
 
     <div class="section technology">
         <div class="row">
-            {% embed '../components/icon_card.twig' with {
-                'match_heights': 'technology',
-                title: 'Current Methods',
-                icon: 'fa-heart',
-            } %}
-                {% block body %}
-                    <p>
-                        Deliver TOO few stem cells to the
-                        heart that do not stay long enough to
-                        make repair efficient and restore
-                        heart function.
-                    </p>
-                {% endblock %}
-            {% endembed %}
-
-            {% embed '../components/icon_card.twig' with {
-                'match_heights': 'technology',
-                title: "TargaCell's Solutions",
-                icon: 'fa-heart',
-            } %}
-                {% block body %}
-                    <p>
-                        We will provide a safe, efficient
-                        intravenous, stem cell delivery,
-                        without anesthesia or
-                        cardiac catheter.
-                    </p>
-                {% endblock %}
-            {% endembed %}
-
-            <p data-match-heights="technology">
-                The Company’s platform technology leverages these proprietary
-                biologics to deliver and target
-                MSCs and CD34+ stem cells to
-                specific organs and retain them
-                there to enable repair of damage.
-            </p>
+            <div>
+                {% embed '../components/icon-card.twig' with {
+                    'match_heights': 'technology',
+                    title: 'Current Methods',
+                    icon: 'fa-heart',
+                } %}
+                    {% block body %}
+                        <p>
+                            Deliver TOO few stem cells to the
+                            heart that do not stay long enough to
+                            make repair efficient and restore
+                            heart function.
+                        </p>
+                    {% endblock %}
+                {% endembed %}
+            </div>
+            <div>
+                {% embed '../components/icon-card.twig' with {
+                    'match_heights': 'technology',
+                    title: "TargaCell's Solutions",
+                    icon: 'fa-heart',
+                } %}
+                    {% block body %}
+                        <p>
+                            We will provide a safe, efficient
+                            intravenous, stem cell delivery,
+                            without anesthesia or
+                            cardiac catheter.
+                        </p>
+                    {% endblock %}
+                {% endembed %}
+            </div>
+            <div>
+                <p data-match-heights="technology">
+                    The Company’s platform technology leverages these proprietary
+                    biologics to deliver and target
+                    MSCs and CD34+ stem cells to
+                    specific organs and retain them
+                    there to enable repair of damage.
+                </p>
+            </div>
         </div>
 
         <div class="row">
-            <img data-match-heights="technology" src="./images/about/doctor_1.jpg" alt="doctor reviewing images" />
-            <img data-match-heights="technology" src="./images/about/patient_1.jpg" alt="patient receiving treatment" />
-            <p data-match-heights="technology">
-                A particular combination of stem cells and
-                biologic allows the delivery and retention in
-                a specific organ or tissue.
-            </p>
+            <div data-match-heights="technology" class="image" style="background-image: url(./images/about/doctor_1.jpg)" alt="doctor reviewing images"></div>
+            <div data-match-heights="technology" class="image" style="background-image: url(./images/about/patient_1.jpg)" alt="patient receiving treatment"> </div>
+            <div>
+                <p data-match-heights="technology">
+                    A particular combination of stem cells and
+                    biologic allows the delivery and retention in
+                    a specific organ or tissue.
+                </p>
+            </div>
         </div>
 
-        <img src="./images/about/problem_solution.jpg" alt="TaraCell solves the problem for stem cell delivery for heart repair">
+        <img src="./images/about/problem_solution.png" alt="TaraCell solves the problem for stem cell delivery for heart repair">
     </div>
 
     <div class="section what-is-targacell">
-        <div>
-            <h2>What is TargaCell?</h2>
-            <p>
-                TargaCell is a stem cell delivery
-                company that can deliver 10X more
-                stem cells to the heart and retain
-                them there to dramatically improve
-                the repair of damaged heart tissue
-                resulting from a heart attack.
-            </p>
+        <div class="left">
+            <div class="year-text">03</div>
+            <div class="text-over">
+                <h2>What is TargaCell?</h2>
+                <p>
+                    TargaCell is a stem cell delivery
+                    company that can deliver 10X more
+                    stem cells to the heart and retain
+                    them there to dramatically improve
+                    the repair of damaged heart tissue
+                    resulting from a heart attack.
+                </p>
+            </div>
         </div>
-        <div>
+        <div class="right">
             <div class="row">
-                <img data-match-heights="what-is-targacell" src="./images/about/doctor_2.jpg" alt="doctor reviewing images" />
-                <img data-match-heights="what-is-targacell" src="./images/about/patient_2.jpg" alt="patient receiving treatment" />
-                <img data-match-heights="what-is-targacell" src="./images/about/cells.jpg" alt="doctor reviewing images" />
+                <div class="image" style="background-image: url(./images/about/doctor_2.jpg)"></div>
+                <div class="image" style="background-image: url(./images/about/patient_2.jpg)"></div>
+                <div class="image" style="background-image: url(./images/about/cells.jpg)"></div>
             </div>
             <div class="row">
-                {% embed '../components/icon_card.twig' with {
+                {% embed '../components/icon-card.twig' with {
                     'match_heights': 'what-is-targacell',
                     title: "Universal Delivery Technology",
                     icon: 'fa-heart',
@@ -120,7 +129,7 @@
                         </p>
                     {% endblock %}
                 {% endembed %}
-                {% embed '../components/icon_card.twig' with {
+                {% embed '../components/icon-card.twig' with {
                     'match_heights': 'what-is-targacell',
                     title: "Safe &amp; Efficient",
                     icon: 'fa-heart',
@@ -134,7 +143,7 @@
                         </p>
                     {% endblock %}
                 {% endembed %}
-                {% embed '../components/icon_card.twig' with {
+                {% embed '../components/icon-card.twig' with {
                     'match_heights': 'what-is-targacell',
                     title: "Delivery & Retention",
                     icon: 'fa-heart',
@@ -158,7 +167,14 @@
             Meet The TargaCell Team
         </h2>
         <p>
-
+            Building a brighter future for all
         </p>
+
+        <div class="section">
+
+        </div>
+
+        <a href="./team.html" class="button">Meet the team</a>
     </div>
+
 {% endblock %}

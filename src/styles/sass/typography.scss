@@ -1,5 +1,8 @@
+@use "./constants";
+
 $fontFamilyCursive: 'cursive';
 $fontFamilyBody: 'arial', sans-serif;
+$bodyLineHeight: 1.5em;
 
 @font-face {
   font-family: $fontFamilyCursive;
@@ -15,7 +18,7 @@ $fontSize5: 0.8rem;
 @mixin bodyText {
   font-family: $fontFamilyBody;
   font-size: $fontSize4;
-  line-height: all.$bodyLineHeight;
+  line-height: $bodyLineHeight;
 }
 
 @mixin titleText {
