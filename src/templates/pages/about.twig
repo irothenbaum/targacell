@@ -9,172 +9,190 @@
     <span>About</span>
 {% endblock %}
 
-{% block content %}
-    <div class="section intro-heart">
-        <div>
+{% block content_wrapper %}
+    <div id="content" class="content-width">
+        <div class="section intro-heart">
+            <div>
+                <h2>
+                    A non-invasive stem cell delivery system
+                    using proprietary protein to
+                    repair damaged hearts
+                </h2>
+                <p>
+                    TargaCell is an early-stage biopharmaceutical company focused on repairing organ damage
+                    caused by disease processes to reverse disease, recover function, and restore quality of life.
+                    We achieve this through improved non-invasive, simple intravenous injection of our products,
+                    which provide targeted delivery of a second simple injection of regenerative cells to specific
+                    organs, thereby enhancing damaged tissue repair. The Company is developing first-in-class
+                    biologic therapeutics based on the characteristics of naturally occurring and chemically
+                    modified proprietary protein preparations and their innate ability to bind specifically with stem
+                    cells and block extraneous (Off-target) organ binding sites that trap them, preventing migration
+                    to tissues needing repair.
+                </p>
+            </div>
+
+            <img src="./images/heart.png" alt="heart"/>
+        </div>
+
+        <div class="section technology">
+            <div class="row">
+                <div>
+                    {% embed '../components/icon-card.twig' with {
+                        'match_heights': 'technology',
+                        title: 'Current Methods',
+                        icon: 'fa-heart',
+                    } %}
+                        {% block body %}
+                            <p>
+                                Deliver TOO few stem cells to the
+                                heart that do not stay long enough to
+                                make repair efficient and restore
+                                heart function.
+                            </p>
+                        {% endblock %}
+                    {% endembed %}
+                </div>
+                <div>
+                    {% embed '../components/icon-card.twig' with {
+                        'match_heights': 'technology',
+                        title: "TargaCell's Solutions",
+                        icon: 'fa-heart',
+                    } %}
+                        {% block body %}
+                            <p>
+                                We will provide a safe, efficient
+                                intravenous, stem cell delivery,
+                                without anesthesia or
+                                cardiac catheter.
+                            </p>
+                        {% endblock %}
+                    {% endembed %}
+                </div>
+                <div>
+                    <p data-match-heights="technology">
+                        The Company’s platform technology leverages these proprietary
+                        biologics to deliver and target
+                        MSCs and CD34+ stem cells to
+                        specific organs and retain them
+                        there to enable repair of damage.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div data-match-heights="technology" class="image" style="background-image: url(./images/about/doctor_1.jpg)" alt="doctor reviewing images"></div>
+                <div data-match-heights="technology" class="image" style="background-image: url(./images/about/patient_1.jpg)" alt="patient receiving treatment"> </div>
+                <div>
+                    <p data-match-heights="technology">
+                        A particular combination of stem cells and
+                        biologic allows the delivery and retention in
+                        a specific organ or tissue.
+                    </p>
+                </div>
+            </div>
+
+            <img src="./images/about/problem_solution.png" alt="TaraCell solves the problem for stem cell delivery for heart repair">
+        </div>
+
+        <div class="section what-is-targacell">
+            <div class="left">
+                <div class="year-text">03</div>
+                <div class="text-over">
+                    <h2>What is TargaCell?</h2>
+                    <p>
+                        TargaCell is a stem cell delivery
+                        company that can deliver 10X more
+                        stem cells to the heart and retain
+                        them there to dramatically improve
+                        the repair of damaged heart tissue
+                        resulting from a heart attack.
+                    </p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="row">
+                    <div class="image" style="background-image: url(./images/about/doctor_2.jpg)"></div>
+                    <div class="image" style="background-image: url(./images/about/patient_2.jpg)"></div>
+                    <div class="image" style="background-image: url(./images/about/cells.jpg)"></div>
+                </div>
+                <div class="row">
+                    {% embed '../components/icon-card.twig' with {
+                        'match_heights': 'what-is-targacell',
+                        title: "Universal Delivery Technology",
+                        icon: 'fa-heart',
+                    } %}
+                        {% block body %}
+                            <p>
+                                TargaCell can provide delivery
+                                of all major types of stem cells
+                                used in heart repair using our
+                                proprietary proteins.
+                            </p>
+                        {% endblock %}
+                    {% endembed %}
+                    {% embed '../components/icon-card.twig' with {
+                        'match_heights': 'what-is-targacell',
+                        title: "Safe &amp; Efficient",
+                        icon: 'fa-heart',
+                    } %}
+                        {% block body %}
+                            <p>
+                                We will provide a safe,
+                                efficient intravenous, stem cell
+                                delivery, without anesthesia
+                                or cardiac catheter.
+                            </p>
+                        {% endblock %}
+                    {% endembed %}
+                    {% embed '../components/icon-card.twig' with {
+                        'match_heights': 'what-is-targacell',
+                        title: "Delivery & Retention",
+                        icon: 'fa-heart',
+                    } %}
+                        {% block body %}
+                            <p>
+                                We deliver and retain these
+                                stem cells in the heart to
+                                expedite the repair of
+                                damaged tissue and restore
+                                function.
+                            </p>
+                        {% endblock %}
+                    {% endembed %}
+                </div>
+            </div>
+        </div>
+
+        <div class="section meet-the-team">
             <h2>
-                A non-invasive stem cell delivery system
-                using proprietary protein to
-                repair damaged hearts
+                Meet The TargaCell Team
             </h2>
             <p>
-                TargaCell is an early-stage biopharmaceutical company focused on repairing organ damage
-                caused by disease processes to reverse disease, recover function, and restore quality of life.
-                We achieve this through improved non-invasive, simple intravenous injection of our products,
-                which provide targeted delivery of a second simple injection of regenerative cells to specific
-                organs, thereby enhancing damaged tissue repair. The Company is developing first-in-class
-                biologic therapeutics based on the characteristics of naturally occurring and chemically
-                modified proprietary protein preparations and their innate ability to bind specifically with stem
-                cells and block extraneous (Off-target) organ binding sites that trap them, preventing migration
-                to tissues needing repair.
+                Building a brighter future for all
             </p>
+
+            <div class="section">
+                {% embed '../components/bios/bio_catherine_phillips.twig' with {'match_heights': 'meet-the-team'} %}{% endembed %}
+                {% embed '../components/bios/bio_robin_mcwherter.twig' with {'match_heights': 'meet-the-team'} %}{% endembed %}
+                {% embed '../components/bios/bio_david_ellison.twig' with {'match_heights': 'meet-the-team'} %}{% endembed %}
+                {% embed '../components/bios/bio_susan_ball_kell.twig' with {'match_heights': 'meet-the-team'} %}{% endembed %}
+            </div>
+
+            <a href="./team.html" class="button">Meet the team</a>
         </div>
 
-        <img src="./images/heart.png" alt="heart"/>
     </div>
+    <div class="contact-us">
+        <div>
+            <h2>
+                Get in touch today
+            </h2>
+            <p>
+                Call us at <a href="tel:+18064330795">+1 806 433 0795</a> or request an appointment online
+            </p>
 
-    <div class="section technology">
-        <div class="row">
-            <div>
-                {% embed '../components/icon-card.twig' with {
-                    'match_heights': 'technology',
-                    title: 'Current Methods',
-                    icon: 'fa-heart',
-                } %}
-                    {% block body %}
-                        <p>
-                            Deliver TOO few stem cells to the
-                            heart that do not stay long enough to
-                            make repair efficient and restore
-                            heart function.
-                        </p>
-                    {% endblock %}
-                {% endembed %}
-            </div>
-            <div>
-                {% embed '../components/icon-card.twig' with {
-                    'match_heights': 'technology',
-                    title: "TargaCell's Solutions",
-                    icon: 'fa-heart',
-                } %}
-                    {% block body %}
-                        <p>
-                            We will provide a safe, efficient
-                            intravenous, stem cell delivery,
-                            without anesthesia or
-                            cardiac catheter.
-                        </p>
-                    {% endblock %}
-                {% endembed %}
-            </div>
-            <div>
-                <p data-match-heights="technology">
-                    The Company’s platform technology leverages these proprietary
-                    biologics to deliver and target
-                    MSCs and CD34+ stem cells to
-                    specific organs and retain them
-                    there to enable repair of damage.
-                </p>
-            </div>
+            <a class="button" href="./contact.html">Contact us</a>
         </div>
-
-        <div class="row">
-            <div data-match-heights="technology" class="image" style="background-image: url(./images/about/doctor_1.jpg)" alt="doctor reviewing images"></div>
-            <div data-match-heights="technology" class="image" style="background-image: url(./images/about/patient_1.jpg)" alt="patient receiving treatment"> </div>
-            <div>
-                <p data-match-heights="technology">
-                    A particular combination of stem cells and
-                    biologic allows the delivery and retention in
-                    a specific organ or tissue.
-                </p>
-            </div>
-        </div>
-
-        <img src="./images/about/problem_solution.png" alt="TaraCell solves the problem for stem cell delivery for heart repair">
-    </div>
-
-    <div class="section what-is-targacell">
-        <div class="left">
-            <div class="year-text">03</div>
-            <div class="text-over">
-                <h2>What is TargaCell?</h2>
-                <p>
-                    TargaCell is a stem cell delivery
-                    company that can deliver 10X more
-                    stem cells to the heart and retain
-                    them there to dramatically improve
-                    the repair of damaged heart tissue
-                    resulting from a heart attack.
-                </p>
-            </div>
-        </div>
-        <div class="right">
-            <div class="row">
-                <div class="image" style="background-image: url(./images/about/doctor_2.jpg)"></div>
-                <div class="image" style="background-image: url(./images/about/patient_2.jpg)"></div>
-                <div class="image" style="background-image: url(./images/about/cells.jpg)"></div>
-            </div>
-            <div class="row">
-                {% embed '../components/icon-card.twig' with {
-                    'match_heights': 'what-is-targacell',
-                    title: "Universal Delivery Technology",
-                    icon: 'fa-heart',
-                } %}
-                    {% block body %}
-                        <p>
-                            TargaCell can provide delivery
-                            of all major types of stem cells
-                            used in heart repair using our
-                            proprietary proteins.
-                        </p>
-                    {% endblock %}
-                {% endembed %}
-                {% embed '../components/icon-card.twig' with {
-                    'match_heights': 'what-is-targacell',
-                    title: "Safe &amp; Efficient",
-                    icon: 'fa-heart',
-                } %}
-                    {% block body %}
-                        <p>
-                            We will provide a safe,
-                            efficient intravenous, stem cell
-                            delivery, without anesthesia
-                            or cardiac catheter.
-                        </p>
-                    {% endblock %}
-                {% endembed %}
-                {% embed '../components/icon-card.twig' with {
-                    'match_heights': 'what-is-targacell',
-                    title: "Delivery & Retention",
-                    icon: 'fa-heart',
-                } %}
-                    {% block body %}
-                        <p>
-                            We deliver and retain these
-                            stem cells in the heart to
-                            expedite the repair of
-                            damaged tissue and restore
-                            function.
-                        </p>
-                    {% endblock %}
-                {% endembed %}
-            </div>
-        </div>
-    </div>
-
-    <div class="section meet-the-team">
-        <h2>
-            Meet The TargaCell Team
-        </h2>
-        <p>
-            Building a brighter future for all
-        </p>
-
-        <div class="section">
-
-        </div>
-
-        <a href="./team.html" class="button">Meet the team</a>
     </div>
 
 {% endblock %}

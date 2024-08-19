@@ -14,8 +14,8 @@
 
     .nav {
       a {
-        @include all.hover-cta();
         margin-left: all.$spaceSmall;
+        @include all.hover-cta();
       }
     }
 
@@ -23,7 +23,6 @@
       $size: 42px;
 
       a {
-        @include all.hover-cta();
         height: $size;
         width: $size;
         line-height: $size;
@@ -33,6 +32,7 @@
         display: inline-block;
         font-size: all.$fontSize3;
         margin-left: all.$spaceExtraSmall;
+        @include all.hover-cta();
 
         &.poland {
           margin-left: all.$spaceMedium;

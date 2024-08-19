@@ -7,9 +7,9 @@
   opacity: 0.9;
   transition: opacity constants.$transition;
 
-  //&:hover {
-  //  opacity: 1;
-  //}
+  &:hover {
+    opacity: 1;
+  }
 }
 
 @mixin div-image {
@@ -17,4 +17,19 @@
   padding-top: 100%;
   background: white no-repeat center center;
   background-size: cover;
+}
+
+@mixin hover-underline {
+  &:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: colors.$white;
+    transition: width constants.$transition;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
 }

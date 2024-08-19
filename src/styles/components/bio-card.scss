@@ -1,0 +1,48 @@
+@use  "../sass/all";
+
+$iconSize : 2rem;
+
+.bio-card {
+  width: 100%;
+  text-align: left;
+
+  .bio-image {
+    width: 100%;
+    display: block;
+  }
+
+  .bio-content {
+    margin-top: all.$spaceSmall;
+
+    div {
+      @include all.flex-row();
+      justify-content: flex-start;
+      gap: all.$spaceExtraSmall;
+
+      & > a {
+        height: $iconSize;
+        width: $iconSize;
+        text-align: center;
+        line-height: $iconSize;
+        border-radius: 50%;
+        color: all.$white;
+        @include all.hover-cta();
+
+        &:first-child {
+          background-color: all.$primaryLight;
+        }
+        &:last-child {
+          background-color: all.$primary;
+
+          span {
+            font-size: all.$fontSize5;
+          }
+        }
+      }
+    }
+
+    p {
+      margin-top: all.$spaceSmall;
+    }
+  }
+}
