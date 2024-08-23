@@ -38,7 +38,7 @@
             <div class="row">
                 <div>
                     {% embed '../components/icon-card.twig' with {
-                        'match_heights': 'technology',
+                        max_heights: 'technology',
                         title: 'Current Methods',
                         icon: 'fa-heart',
                     } %}
@@ -54,7 +54,7 @@
                 </div>
                 <div>
                     {% embed '../components/icon-card.twig' with {
-                        'match_heights': 'technology',
+                        max_heights: 'technology',
                         title: "TargaCell's Solutions",
                         icon: 'fa-heart',
                     } %}
@@ -69,7 +69,7 @@
                     {% endembed %}
                 </div>
                 <div>
-                    <p data-match-heights="technology">
+                    <p data-max-heights="technology">
                         The Company’s platform technology leverages these proprietary
                         biologics to deliver and target
                         MSCs and CD34+ stem cells to
@@ -80,10 +80,10 @@
             </div>
 
             <div class="row">
-                <div data-match-heights="technology" class="image" style="background-image: url(./images/about/doctor_1.jpg)" alt="doctor reviewing images"></div>
-                <div data-match-heights="technology" class="image" style="background-image: url(./images/about/patient_1.jpg)" alt="patient receiving treatment"> </div>
+                <div data-max-heights="technology" class="image" style="background-image: url(./images/about/doctor_1.jpg)" alt="doctor reviewing images"></div>
+                <div data-max-heights="technology" class="image" style="background-image: url(./images/about/patient_1.jpg)" alt="patient receiving treatment"> </div>
                 <div>
-                    <p data-match-heights="technology">
+                    <p data-max-heights="technology">
                         A particular combination of stem cells and
                         biologic allows the delivery and retention in
                         a specific organ or tissue.
@@ -117,7 +117,7 @@
                 </div>
                 <div class="row">
                     {% embed '../components/icon-card.twig' with {
-                        'match_heights': 'what-is-targacell',
+                        max_heights: 'what-is-targacell',
                         title: "Universal Delivery Technology",
                         icon: 'fa-heart',
                     } %}
@@ -131,7 +131,7 @@
                         {% endblock %}
                     {% endembed %}
                     {% embed '../components/icon-card.twig' with {
-                        'match_heights': 'what-is-targacell',
+                        max_heights: 'what-is-targacell',
                         title: "Safe &amp; Efficient",
                         icon: 'fa-heart',
                     } %}
@@ -145,7 +145,7 @@
                         {% endblock %}
                     {% endembed %}
                     {% embed '../components/icon-card.twig' with {
-                        'match_heights': 'what-is-targacell',
+                        max_heights: 'what-is-targacell',
                         title: "Delivery & Retention",
                         icon: 'fa-heart',
                     } %}
@@ -172,10 +172,10 @@
             </p>
 
             <div class="section">
-                {% embed '../components/bios/bio_catherine_phillips.twig' with {'match_heights': 'meet-the-team'} %}{% endembed %}
-                {% embed '../components/bios/bio_robin_mcwherter.twig' with {'match_heights': 'meet-the-team'} %}{% endembed %}
-                {% embed '../components/bios/bio_david_ellison.twig' with {'match_heights': 'meet-the-team'} %}{% endembed %}
-                {% embed '../components/bios/bio_susan_ball_kell.twig' with {'match_heights': 'meet-the-team'} %}{% endembed %}
+                {% embed '../components/bios/bio_catherine_phillips.twig' with {max_heights: 'meet-the-team'} %}{% endembed %}
+                {% embed '../components/bios/bio_robin_mcwherter.twig' with {max_heights: 'meet-the-team'} %}{% endembed %}
+                {% embed '../components/bios/bio_david_ellison.twig' with {max_heights: 'meet-the-team'} %}{% endembed %}
+                {% embed '../components/bios/bio_susan_ball_kell.twig' with {max_heights: 'meet-the-team'} %}{% endembed %}
             </div>
 
             <a href="./team.html" class="button">Meet the team</a>

@@ -10,8 +10,10 @@ https://www.dropbox.com/scl/fo/2v6zhk7mo7d7qq60abd9a/ACUQBTch9PICgPOgyoAAybk?rlk
 
 #### Generally:
 - What's the body font?
+  - **A:** Raleway
 
 #### HOME:
 - Hero image is a different color than the designs
 - Missing icons for the various cards on the page
 - Quotation marks on Testimonials (could maybe just tell me the font?)
+  - **A:** Aviano Flare, Jackie can create an image if needed 

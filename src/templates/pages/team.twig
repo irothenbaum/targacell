@@ -1,0 +1,133 @@
+{% extends "../default.twig" %}
+
+{% block styles %}
+    {{ parent() }}
+    <link rel="stylesheet" href="./styles/team.css"/>
+{% endblock %}
+
+{% block breadcrumbs_content %}
+    <span>About</span>
+{% endblock %}
+
+{% block content %}
+    <div class="section cathy-and-robin">
+        <img src="./images/team/cathy_and_robin.jpg" alt="Cathy and Robin" />
+
+        <div>
+            <h3>
+                A Highly Experienced Team committed to alleviating pain and suffering from heart disease – heart attacks and heart failure
+            </h3>
+            <p>
+                Our technology delivers 10X more adult stem cells, intravenously, to the
+                damaged heart, without heart catheterization. It enhances repair and
+                restores heart function, more efficiently than current heart repair clinical
+                regenerative medicine protocols.
+            </p>
+            <p>
+                TargaCell is a Chicago-based biotech, dedicated to repairing damaged
+                hearts, improving their function, preventing progression to heart failure
+                and restoring the quality of life for people with heart disease.
+            </p>
+        </div>
+    </div>
+
+    <div class="section leadership">
+        <img src="./images/heart.png" alt="heart"/>
+
+        <div class="section-title">
+            <h2>Leadership</h2>
+            <p>The TargaCell Corporation Leadership Team</p>
+        </div>
+
+        <div class="headshot-gallery">
+            {% embed '../components/bios/bio_catherine_phillips.twig' with {min_widths: 'meet-the-team'} %}{% endembed %}
+            {% embed '../components/bios/bio_robin_mcwherter.twig' with {min_widths: 'meet-the-team'} %}{% endembed %}
+            {% embed '../components/bios/bio_david_ellison.twig' with {min_widths: 'meet-the-team'} %}{% endembed %}
+            {% embed '../components/bios/bio_susan_ball_kell.twig' with {min_widths: 'meet-the-team'} %}{% endembed %}
+            {% embed '../components/bio-card.twig' with {
+                min_widths: 'meet-the-team',
+                name: "Matthew Raymond",
+                credentials: "PhD, MBA",
+                role: "VP Business Development and Regulatory",
+                image: "matt_raymond.jpg",
+                linkedin: "https://TODOTHIS.com",
+                bio: "https://TODOTHIS.com"
+            } %}
+            {% endembed %}
+            {% embed '../components/bios/bio_mark_pittenger.twig' with {min_widths: 'meet-the-team'} %}{% endembed %}
+            {% embed '../components/bio-card.twig' with {
+                min_widths: 'meet-the-team',
+                name: "Patrick D. Lamb",
+                credentials: "JD",
+                role: "General Counsel",
+                image: "pat_lamb.jpg",
+                linkedin: "https://TODOTHIS.com",
+                bio: "https://TODOTHIS.com"
+            } %}
+            {% endembed %}
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">
+            <h2>Board of Directors</h2>
+            <p>The TargaCell Corporation Board of Directors</p>
+        </div>
+        <div class="headshot-gallery">
+            {% embed '../components/bios/bio_catherine_phillips.twig' with {min_widths: 'meet-the-team'} %}{% endembed %}
+            {% embed '../components/bios/bio_robin_mcwherter.twig' with {min_widths: 'meet-the-team'} %}{% endembed %}
+            {% embed '../components/bios/bio_david_ellison.twig' with {min_widths: 'meet-the-team'} %}{% endembed %}
+            {% embed '../components/bios/bio_susan_ball_kell.twig' with {min_widths: 'meet-the-team'} %}{% endembed %}
+            {% embed '../components/bios/bio_mark_pittenger.twig' with {min_widths: 'meet-the-team'} %}{% endembed %}
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">
+            <h2>Business Advisor</h2>
+            <p>The TargaCell Corporation Business Advisor</p>
+        </div>
+        <div class="headshot-gallery">
+            {% embed '../components/bio-card.twig' with {
+                min_widths: 'meet-the-team',
+                name: "Michael Beaubaire",
+                credentials: "MD, MBA",
+                role: "",
+                image: "michael_beaubaire.jpg",
+                linkedin: "https://TODOTHIS.com",
+                bio: "https://TODOTHIS.com"
+            } %}
+            {% endembed %}
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">
+            <h2>Scientific Advisors</h2>
+            <p>The TargaCell Corporation Scientific Advisors</p>
+        </div>
+        <div class="headshot-gallery">
+            {% embed '../components/bio-card.twig' with {
+                min_widths: 'meet-the-team',
+                name: "Scott Burger",
+                credentials: "MD",
+                role: "FDA and Clinical Trials",
+                image: "scott_burger.jpg",
+                linkedin: "https://TODOTHIS.com",
+                bio: "https://TODOTHIS.com"
+            } %}
+            {% endembed %}
+            {% embed '../components/bio-card.twig' with {
+                min_widths: 'meet-the-team',
+                name: "Douglas Held",
+                credentials: "PhD",
+                role: "Protein Manufacturing and Assay Development",
+                image: "doug_held.jpg",
+                linkedin: "https://TODOTHIS.com",
+                bio: "https://TODOTHIS.com"
+            } %}
+            {% endembed %}
+        </div>
+    </div>
+
+{% endblock %}

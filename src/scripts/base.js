@@ -1,34 +1,47 @@
 (function($, window) {
   $(document).ready(function() {
-    matchHeights()
-    $(window).on('resize', matchHeights)
+    maxHeights()
+    minWidths()
+    $(window).on('resize', maxHeights)
   })
 
-  let matchedHeights = false
+  let alreadyComputed = {}
+  function maxHeights() {
+    _genericMatch('data-max-heights', 'height', ($elem, current) => {
+      return Math.max(current, $elem.outerHeight())
+    }, 0)
+  }
 
-  const lookup = {}
-  function matchHeights() {
-    if (matchedHeights) {
-      $('[data-match-heights]').each(function(i, elem) {
-        $(elem).css('height', '')
+  function minWidths() {
+    _genericMatch('data-min-widths', 'width', ($elem, current) => {
+      return Math.min(current, $elem.outerWidth())
+    }, 10000)
+  }
+
+  function _genericMatch(rawAttr, style, aggregateFunc, initial) {
+    const attr= `[${rawAttr}]`
+    if (alreadyComputed[attr]) {
+      $(attr).each(function(i, elem) {
+        $(elem).css(style, '')
       })
     }
+
+    const lookup = alreadyComputed[attr] || {}
     setTimeout(() => {
-      $('[data-match-heights]').each(function(i, elem) {
+      $(attr).each(function(i, elem) {
         const $elem = $(elem)
-        const group = $elem.attr('data-match-heights')
-        lookup[group] = lookup[group] || {elems: [], max: 0}
+        const group = $elem.attr(rawAttr)
+        lookup[group] = lookup[group] || {elems: [], agg: initial}
         lookup[group].elems.push($elem)
-        lookup[group].max = Math.max(lookup[group].max, $elem.outerHeight())
+        lookup[group].agg = aggregateFunc($elem, lookup[group].agg)
       })
 
       Object.keys(lookup).forEach(group => {
         lookup[group].elems.forEach($elem => {
-          $elem.css('height', lookup[group].max)
+          $elem.css(style, lookup[group].agg)
         })
       })
-
-      matchedHeights = true
+      alreadyComputed[attr] = lookup
     }, 100)
   }
 })(jQuery, window, undefined)

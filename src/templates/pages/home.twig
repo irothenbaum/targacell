@@ -30,19 +30,19 @@
 
     <div class="content-width">
         <div class="tiles-container">
-            <div class="tile" data-match-heights="tiles">
+            <div class="tile" data-max-heights="tiles">
                 <i class="fas fa-heart"></i>
                 <p>Universal delivery technology</p>
             </div>
-            <div class="tile" data-match-heights="tiles">
+            <div class="tile" data-max-heights="tiles">
                 <i class="fas fa-heart"></i>
                 <p>Safe &amp; efficient process</p>
             </div>
-            <div class="tile" data-match-heights="tiles">
+            <div class="tile" data-max-heights="tiles">
                 <i class="fas fa-heart"></i>
                 <p>Stem cell delivery</p>
             </div>
-            <div class="tile" data-match-heights="tiles">
+            <div class="tile" data-max-heights="tiles">
                 <i class="fas fa-heart"></i>
                 <p>Download executive summary</p>
             </div>
@@ -105,7 +105,7 @@
 
         <div class="section three-cards">
             {% embed '../components/icon-card.twig' with {
-                'match_heights': 'three-cards',
+                max_heights: 'three-cards',
                 title: 'The Problem',
                 icon: 'fa-heart',
             } %}
@@ -124,7 +124,7 @@
             {% endembed %}
 
             {% embed '../components/icon-card.twig' with {
-                'match_heights': 'three-cards',
+                max_heights: 'three-cards',
                 title: 'The Solution',
                 icon: 'fa-heart',
             } %}
@@ -144,7 +144,7 @@
             {% endembed %}
 
             {% embed '../components/icon-card.twig' with {
-                'match_heights': 'three-cards',
+                max_heights: 'three-cards',
                 title: 'The Solution',
                 icon: 'fa-scale-unbalanced',
             } %}

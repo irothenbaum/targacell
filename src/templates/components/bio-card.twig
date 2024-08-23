@@ -1,4 +1,7 @@
-<div class="bio-card" data-match-heights="{{ match_heights }}">
+<div class="bio-card"
+    {% if max_heights %}data-max-heights="{{ max_heights }}"{% endif%}
+    {% if min_widths %}data-min-widths="{{ min_widths }}"{% endif%}
+>
     <img class="bio-image" src="./images/headshots/{{ image }}" alt="Picture of {{ name }}">
     <div class="bio-content">
         <div>

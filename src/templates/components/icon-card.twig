@@ -1,4 +1,7 @@
-<div class="icon-card" data-match-heights="{{ match_heights }}">
+<div class="icon-card"
+    {% if max_heights %}data-max-heights="{{ max_heights }}"{% endif %}
+    {% if min_widths %}data-min-widths="{{ min_widths }}"{% endif %}
+>
     <i class="fas {{ icon }}"></i>
     <h3>{{ title }}</h3>
     <div class="small-divider"></div>

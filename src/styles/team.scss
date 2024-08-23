@@ -1,0 +1,72 @@
+@use "sass/all";
+@use "components/bio-card";
+
+.section {
+  margin: all.$spaceLarge 0;
+  padding-bottom: all.$spaceMedium;
+  border-bottom: 2px solid all.$primaryDark;
+
+  &:first-child, &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+
+
+  &.cathy-and-robin {
+    @include all.flex-row();
+    margin: all.$spaceExtraExtraLarge auto;
+
+    img, div {
+      flex: 1;
+    }
+
+    div {
+      padding-left: all.$spaceMedium;
+      text-align: left;
+
+      h3 {
+        @include all.subtitleText();
+        color: all.$primaryDark;
+      }
+
+      p {
+        margin-top: all.$spaceMedium;
+      }
+    }
+  }
+
+  &.leadership {
+    & > img {
+      width: 16rem;
+      margin: 0 auto all.$spaceLarge;
+    }
+  }
+}
+
+.section-title {
+  margin-bottom: all.$spaceExtraLarge;
+
+  h2 {
+    @include all.titleText();
+    color: all.$primaryDark;
+  }
+
+  p {
+    margin-top: all.$spaceMediumLarge;
+    font-size: all.$fontSize3;
+  }
+}
+
+.headshot-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: all.$spaceMedium;
+
+  .bio-card {
+    // 0.66 represents the 2 medium gaps between 3 items
+    max-width: calc(33% - #{all.$spaceMedium * 0.66});
+    margin-bottom: all.$spaceMedium;
+  }
+}
