@@ -22,7 +22,7 @@ exports.handler = async (event) => {
 
   try {
     // Deconstruct body params
-    const {name, phone, email, subject, message} = JSON.parse(event.body)
+    const {form_name, name, phone, email, subject, message} = JSON.parse(event.body)
 
     // Email options
     const mailOptions = {
@@ -30,6 +30,9 @@ exports.handler = async (event) => {
       to: process.env.TARGET_EMAIL,
       subject: subject,
       text: `
+        Form Name:
+        ${form_name}
+        
         Name: 
         ${name}
         

@@ -1,1 +1,31 @@
 @use "sass/all";
+@use "components/contact-form";
+
+.intro {
+  h1 {
+    @include all.titleText();
+    color: all.$primaryDark;
+  }
+
+  p {
+    margin-top: all.$spaceMedium;
+  }
+}
+
+.form-wrapper {
+  @include all.flex-row();
+
+  & > div:first-child {
+    max-width: 30%;
+    width: 300px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  & > div:last-child {
+      flex: 1;
+      margin-left: all.$spaceMedium;
+  }
+}

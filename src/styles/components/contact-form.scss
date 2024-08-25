@@ -1,0 +1,36 @@
+@use "../sass/all";
+
+.contact-form-container {
+  .form-row {
+    @include all.flex-row();
+    margin-bottom: 1rem;
+    gap: all.$spaceMedium;
+
+    & > div {
+      flex: 1;
+
+      label {
+        display: inline-block;
+        margin-right: all.$spaceSmall;
+        font-size: all.$fontSize3;
+      }
+
+      input {
+        flex: 1;
+        border: 1px solid all.$primary;
+      }
+    }
+  }
+
+  .message-container {
+    label {
+      display: block;
+    }
+
+    textarea {
+      margin-top: all.$spaceSmall;
+      width: 100%;
+      border: 1px solid all.$primary;
+    }
+  }
+}

@@ -5,10 +5,31 @@
     <link rel="stylesheet" href="./styles/investors.css"/>
 {% endblock %}
 
+{% block scripts %}
+    {{ parent() }}
+    <script src="./scripts/contact.js"></script>
+{% endblock %}
+
 {% block breadcrumbs_content %}
     <span>Investors</span>
 {% endblock %}
 
 {% block content %}
+    <div class="section intro">
+        <h1>Investor Form</h1>
+        <p>
+            Submit your Information to Request Access to the Executive Summary.
+            To obtain information on new offerings and begin the conversation about possibly becoming an investor of ours,
+            please fill out the information and we will be in touch with you.
+        </p>
+    </div>
 
+    <div class="section form-wrapper">
+        <div>
+            <img src="./images/heart.png" alt="Heart logo" />
+            <div>PLACE HOLDER</div>
+        </div>
+
+        {%  embed "../components/contact-form.twig" with {form_name: "Investors Form"} %}{% endembed %}
+    </div>
 {% endblock %}

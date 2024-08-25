@@ -1,0 +1,34 @@
+<div class="contact-form-container">
+    <form class="contact-form">
+        <input type="hidden" name="form_name" value="{{ form_name }}">
+        <div class="form-row">
+            <div>
+                <label for="{{ form_name }}-name">Name</label>
+                <input type="text" name="name" id="{{ form_name }}-name" required>
+            </div>
+            <div>
+                <label for="{{ form_name }}-email">Email</label>
+                <input type="email" name="email" id="{{ form_name }}-email" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div>
+                <label for="{{ form_name }}-phone">Phone</label>
+                <input type="tel" name="phone" id="{{ form_name }}-phone">
+            </div>
+            <div>
+                <label for="{{ form_name }}-subject">Subject</label>
+                <input type="text" name="subject" id="{{ form_name }}-subject">
+            </div>
+        </div>
+
+        <div class="message-container">
+            <label for="{{ form_name }}-message">Write your message:</label>
+            <textarea name="message" id="{{ form_name }}-message" required></textarea>
+        </div>
+
+        <div class="button-container">
+            <input type="submit" value="Send Message" class="button">
+        </div>
+    </form>
+</div>
