@@ -9,18 +9,23 @@
 
   p {
     margin-top: all.$spaceMedium;
+    font-size: all.$fontSize3;
+    line-height: all.$bodyLineHeight;
   }
 }
 
 .form-wrapper {
   @include all.flex-row();
+  align-items: flex-start;
 
   & > div:first-child {
+    text-align: center;
     max-width: 30%;
     width: 300px;
 
     img {
-      width: 100%;
+      width: 90%;
+      margin: 0 auto;
     }
   }
 

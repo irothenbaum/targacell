@@ -10,5 +10,20 @@
 {% endblock %}
 
 {% block content %}
+    <div class="section intro">
+        <h1>Contact Us Today</h1>
+        <p>
+            If you are interested in our technology call us at <a href="tel:+18064330795" class="text-link">#1.806.433.0795</a>
+            <br/>
+            or fill out the contact form below.
+        </p>
+    </div>
 
+    <div class="section form-wrapper">
+        <div>
+            <img src="./images/heart.png" alt="Heart logo" />
+        </div>
+
+        {%  embed "../components/contact-form.twig" with {form_name: "Contact Us"} %}{% endembed %}
+    </div>
 {% endblock %}

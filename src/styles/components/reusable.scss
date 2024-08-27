@@ -31,3 +31,13 @@
   margin: all.$spaceExtraExtraLarge auto;
   text-align: center;
 }
+
+.text-link {
+  color: all.$primaryDark;
+  text-decoration: underline;
+  transition: color all.$transition;
+
+  &:hover {
+    color: all.$primary;
+  }
+}

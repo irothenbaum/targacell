@@ -3,10 +3,11 @@
 .contact-form-container {
   .form-row {
     @include all.flex-row();
-    margin-bottom: 1rem;
-    gap: all.$spaceMedium;
+    margin-bottom: all.$spaceMediumLarge;
+    gap: all.$spaceMediumLarge;
 
     & > div {
+      display: flex;
       flex: 1;
 
       label {
@@ -16,6 +17,7 @@
       }
 
       input {
+        display: inline-block;
         flex: 1;
         border: 1px solid all.$primary;
       }
@@ -23,14 +25,23 @@
   }
 
   .message-container {
+    margin-top: all.$spaceMediumLarge;
+
     label {
+      font-size: all.$fontSize3;
       display: block;
+      text-align: left;
     }
 
     textarea {
       margin-top: all.$spaceSmall;
       width: 100%;
       border: 1px solid all.$primary;
+      min-height: 200px;
     }
+  }
+
+  .button-container {
+    margin-top: all.$spaceLarge;
   }
 }
