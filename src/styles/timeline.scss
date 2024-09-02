@@ -1,1 +1,12 @@
 @use "sass/all";
+@use "components/blog-card";
+
+
+.mini-blog {
+  display: flex;
+  gap: all.$spaceMedium;
+
+  .blog-card {
+    width: 100%;
+  }
+}

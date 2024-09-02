@@ -1,0 +1,62 @@
+@use "../sass/all";
+
+.blog-card {
+  position: relative;
+  text-align: left;
+  padding-top: all.$spaceSmall;
+
+  .date-tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+    span {
+      display: inline-block;
+      text-transform: uppercase;
+      color: all.$white;
+      background-color: all.$primaryLight;
+      padding: all.$spaceExtraSmall all.$spaceSmall;
+    }
+  }
+
+  .banner-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 10/6;
+
+    background: white center center;
+    background-size: cover;
+  }
+
+  p.in-blog, a.more-link {
+    margin: all.$spaceSmall 0;
+    text-align: left;
+    font-size: all.$fontSize5;
+    color: all.$darkGrey;
+  }
+
+  p.description {
+    text-align: left;
+    font-size: all.$fontSize4;
+    color: all.$darkGrey;
+    font-family: all.$fontFamilyBodyBold;
+  }
+
+  a.more-link {
+    display: inline-block;
+    cursor: pointer;
+
+    &:after {
+      content: '>';
+      display: inline-block;
+      margin-left: all.$spaceExtraExtraSmall;
+      transition: margin all.$transition;
+    }
+
+    &:hover:after {
+      margin-left: all.$spaceSmall;
+    }
+  }
+}

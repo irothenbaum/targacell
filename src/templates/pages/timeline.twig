@@ -10,5 +10,90 @@
 {% endblock %}
 
 {% block content %}
+    <div class="section milestones">
+        <div class="copy">
+            <h2>
+                Timeline & Milestones for Development
+                Pathway
+            </h2>
+            <p>
+                <strong>Development Path:</strong>
+                TargaCell is seeking $3.5M to complete the Validation of Proof-of-Concept
+                in mice without & with a surgically-induced heart attack, and manufacturing, leading within
+                20-24 months to IND-enabling safety and toxicology trials.
+            </p>
 
+            <p>
+                <strong>Progress:</strong>
+                Proof-of-Concept data in a preclinical model show that our biologic products deliver,
+                direct, and target 10x the number of stem cells to the heart without a catheter and retain these cells
+                to enhance damaged tissue repair and restore function.
+                TargaCell's proof-of-concept data support
+                the following:
+            </p>
+            <ul>
+                <li>
+                    Enhanced restoration of function will result from increased delivery & retention of cells to the
+                    site of damage.
+                </li>
+                <li>
+                    ur biologics prevent the off-target localization (entrapment) of stem cells in unwanted
+                    organs not targeted for repair.
+                </li>
+                <li>
+                    Extending our understanding of the mechanisms & identifying the specific molecules
+                    responsible for controlling cells' migration to an organ & preventing their entrapment will
+                    yield new intellectual property.
+                </li>
+            </ul>
+        </div>
+        <img src="" alt="Pie chart showing allocation of resources" />
+    </div>
+
+    <div class="section">
+        <img src="./images/timeline/validation_and_safety_determination.png" alt="Timeline of development" />
+    </div>
+
+    <div class="section">
+        <img src="./images/timeline/development_timeline.png" alt="Timeline of candidates" />
+    </div>
+
+    <div class="section">
+        <h2>
+            Latest Publications
+        </h2>
+        <p>
+            The news about recent activities.
+        </p>
+
+        <div>
+            <img src="./images/headshots/catherine_phillips.jpg" />
+            <p>In Blog</p>
+            <h4>Welcome to TargaCell</h4>
+        </div>
+    </div>
+
+    <div class="section mini-blog">
+        {% embed '../components/blog-card.twig' with {
+            date: "August 22, 2022",
+            image: "./images/blog/win_top_awards.jpg",
+            description: "Rosalind Franklin University And The SmartHealth Activator Host Inaugural Biotech Business Plan Competition: Three Women Executives Win top Awards",
+            link: "https://TODOTHIS.com",
+        } %}
+        {% endembed %}
+        {% embed '../components/blog-card.twig' with {
+            date: "August 22, 2022",
+            image: "./images/blog/incubator_building.jpg",
+            description: "Rosalind Franklin’s Helix 51 Incubator Attracts handful Of New Businesses; “This Keeps Everything Growing Here, From The Startups To The Big Guys”",
+            link: "https://TODOTHIS.com",
+        } %}
+        {% endembed %}
+        {% embed '../components/blog-card.twig' with {
+            date: "July 1, 2024",
+            image: "./images/blog/funding_anniversary.jpg",
+            description: "TargaCell Corporation, a Chicago biotech, celebrates the first anniversary of the founding of its Polish-American joint venture, Target Cells Sp z o o",
+            link: "https://TODOTHIS.com",
+        } %}
+        {% endembed %}
+    </div>
 {% endblock %}

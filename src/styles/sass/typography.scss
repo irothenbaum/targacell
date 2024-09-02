@@ -1,12 +1,23 @@
 @use "./constants";
 
 $fontFamilyCursive: 'cursive';
-$fontFamilyBody: 'arial', sans-serif;
+$fontFamilyBody: 'raleway-regular';
+$fontFamilyBodyBold: 'raleway-bold';
 $bodyLineHeight: 1.5em;
 
 @font-face {
   font-family: $fontFamilyCursive;
   src: url('../fonts/brannboll.otf') format('opentype');
+}
+
+@font-face {
+  font-family: $fontFamilyBody;
+  src: url('../fonts/raleway-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: $fontFamilyBodyBold;
+  src: url('../fonts/raleway-bold.ttf') format('truetype');
 }
 
 $fontSize1: 3rem;
@@ -22,15 +33,13 @@ $fontSize5: 0.8rem;
 }
 
 @mixin titleText {
-  font-family: $fontFamilyBody;
-  font-weight: bold;
+  font-family: $fontFamilyBodyBold;
   font-size: $fontSize1;
   line-height: 1em;
 }
 
 @mixin subtitleText {
-  font-family: $fontFamilyBody;
-  font-weight: bold;
+  font-family: $fontFamilyBodyBold;
   font-size: $fontSize2;
   line-height: 1em;
 }
