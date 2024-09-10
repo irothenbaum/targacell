@@ -1,7 +1,9 @@
 (function($, window) {
   $(document).ready(function() {
     maxHeights()
+    minHeights()
     minWidths()
+    maxWidths()
     $(window).on('resize', maxHeights)
   })
 
@@ -12,10 +14,22 @@
     }, 0)
   }
 
+  function minHeights() {
+    _genericMatch('data-min-heights', 'height', ($elem, current) => {
+      return Math.min(current, $elem.outerHeight())
+    }, 10000)
+  }
+
   function minWidths() {
     _genericMatch('data-min-widths', 'width', ($elem, current) => {
       return Math.min(current, $elem.outerWidth())
     }, 10000)
+  }
+
+  function maxWidths() {
+    _genericMatch('data-max-widths', 'width', ($elem, current) => {
+      return Math.max(current, $elem.outerWidth())
+    }, 0)
   }
 
   function _genericMatch(rawAttr, style, aggregateFunc, initial) {

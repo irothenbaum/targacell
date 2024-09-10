@@ -1,1 +1,60 @@
 @use "sass/all";
+
+.title {
+  h1 {
+    @include all.titleText();
+    color: all.$primaryDark;
+  }
+
+  p {
+    margin-top: all.$spaceMedium;
+    font-family: all.$fontFamilyBodyBold;
+  }
+
+}
+
+.resources {
+  text-align: center;
+  .resource-header {
+    @include all.subtitleText();
+    padding: all.$spaceSmall;
+    color: all.$primaryDark;
+    text-transform: uppercase;
+    margin-top: all.$spaceExtraLarge;
+    background-color: all.$lightGrey;
+    line-height: 1em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    span {
+      font-style: italic;
+      font-size: all.$fontSize4;
+      margin-top: all.$spaceSmall;
+      color: all.$darkGrey;
+      line-height: 1em;
+      text-transform: none;
+    }
+  }
+
+  p {
+    text-transform: uppercase;
+    color: all.$primaryDark;
+    margin-top: all.$spaceMedium;
+    font-family: all.$fontFamilyBodyBold;
+  }
+
+  a {
+    margin-top: all.$spaceSmall;
+    color: all.$darkGrey;
+    font-style: italic;
+  }
+}
+
+.section {
+  img {
+    max-width: 300px;
+    margin:0 auto;
+  }
+}
