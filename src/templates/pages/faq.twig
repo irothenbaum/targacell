@@ -5,10 +5,327 @@
     <link rel="stylesheet" href="./styles/faq.css"/>
 {% endblock %}
 
+{% block scripts %}
+    {{ parent() }}
+    <script src="./scripts/faq.js" defer></script>
+    <script src="./scripts/contact.js"></script>
+{% endblock %}
+
 {% block breadcrumbs_content %}
     <span>FAQ</span>
 {% endblock %}
 
 {% block content %}
+    <div class="section header">
+        <h1>
+            Frequently Asked Questions
+        </h1>
+        <h4>
+            If you cannot find the answer below, please use the contact form or send us an email to <a href="mailto:info@TargaCell.com">info@TargaCell.com</a>
+        </h4>
+    </div>
 
+    <div class="section faq-container">
+        <div class="left-side">
+            <div class="panel">
+                <h3>TargaCell</h3>
+                <p>
+                    TargaCell is an early-stage biopharmaceutical company focused on repairing
+                    organ damage caused by disease processes to reverse disease, recover
+                    function, and restore quality of life. We
+                    achieve this through
+                    <strong>
+                        improved non-invasive, simple intravenous injection of
+                        our products, which provide targeted
+                        delivery of a second simple injection of
+                        regenerative cells to specific organs,
+                    </strong>
+                    thereby enhancing damaged tissue
+                    repair. The Company is developing
+                    first-in-class biologic therapeutics
+                    based on the characteristics of the
+                    naturally occurring and chemically
+                    modified proprietary protein preparations and their innate ability to bind
+                    specifically with stem cells and block
+                    extraneous (OFF-target) organ binding
+                    sites that trap them, preventing their
+                    migration to tissues needing repair.
+                </p>
+
+                <p>
+                    The Company’s platform technology
+                    leverages these proprietary biologics to
+                    deliver and target MSCs and CD34+
+                    stem cells to specific organs and retain
+                    them there to enable repair of damage.
+                    A particular combination of stem cells
+                    and biologic allows the delivery to and
+                    retention in a specific organ or tissue.
+                </p>
+
+                <p>
+                    Stem cells enable the body’s natural
+                    repair mechanisms using formulations
+                    unique to each medical indication.
+                </p>
+
+                <div class="learn-more">
+                    <p>
+                        Learn more about CD34+ stem cells
+                        and their ability to repair and restore
+                        heart blood supply.
+                    </p>
+                    <a href="https://TODOTHIS.com" class="button">Learn more</a>
+                </div>
+
+                <div class="learn-more">
+                    <p>
+                        Learn more about Mesenchymal
+                        Stem cells (MSCs) ability to repair
+                        and restore heart blood supply.
+                    </p>
+                    <a href="https://TODOTHIS.com" class="button">Learn more</a>
+                </div>
+            </div>
+
+            <img src="./images/heart.png" />
+        </div>
+
+        <div class="right-side">
+            <div class="question-wrapper">
+                <div class="question">
+                    <span>1.</span>
+                    <div>Who are we?</div>
+                    <i class="fa fa-chevron-down"></i>
+                    <i class="fa fa-chevron-up"></i>
+                </div>
+
+                <div class="answer">
+                    <p>
+                        TargaCell is an early-stage biopharmaceutical company focused on
+                        repairing organ damage caused by disease; thus, reversing this injury,
+                        recovering function, and restoring quality of life. We achieve this through
+                        improved non-invasive, targeted delivery of regenerative cells to specific
+                        organs, thereby enhancing the repair of damaged tissue.
+                    </p>
+                </div>
+            </div>
+
+            <div class="question-wrapper">
+                <div class="question">
+                    <span>2.</span>
+                    <div>Why was TargaCell formed?</div>
+                    <i class="fa fa-chevron-down"></i>
+                    <i class="fa fa-chevron-up"></i>
+                </div>
+                <div class="answer">
+                    Everybody knows somebody who has had a heart attack! TargaCell was
+                    founded to develop a non-invasive stem cell delivery platform to repair
+                    damaged hearts and control the damaging immune responses that slow
+                    down repair and the complications seen in COVID-19 as well as inflamma-
+                    tory syndromes.
+                </div>
+            </div>
+
+            <div class="question-wrapper">
+                <div class="question">
+                    <span>3.</span>
+                    <div>What are TargaCell's products and their therapeutic disease indications?</div>
+                    <i class="fa fa-chevron-down"></i>
+                    <i class="fa fa-chevron-up"></i>
+                </div>
+                <div class="answer">
+                    <ul>
+                        <li>
+                            TargaCell's platform consists of unique protein biologics, naturally
+                            occurring or chemically modified blood plasma proteins manufactured
+                            using well-established, validated tested industrial protocols. There are
+                            two proteins: TCC 100 and TCC 200.
+                        </li>
+                        <li>
+                            TargaCell is NOT a stem cell manufacturer but an organ-specific, stem
+                            cell DELIVERY company.
+                        </li>
+                        <li>
+                            Initially, TargaCell's therapeutic platform will be used to efficiently deliver
+                            stem cells that can repair damage caused by disease conditions in the
+                            heart, liver, and lungs. The development of other uses for TargaCell's
+                            protein biologics platform will follow.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question-wrapper">
+                <div class="question">
+                    <span>4.</span>
+                    <div>
+                        How does TargaCell’s technology differ from the current stem cell
+                        delivery method for heart repair? What distinguishes TargaCell's stem cell
+                        delivery system from other currently used heart repair technologies?
+                    </div>
+                    <i class="fa fa-chevron-down"></i>
+                    <i class="fa fa-chevron-up"></i>
+                </div>
+                <div class="answer">
+                    <p>
+                        The problem with current stem cell regenerative methods
+                        is that they
+                        deliver too few stem cells to the heart and do not allow them to stay long
+                        enough to repair the damaged tissue or restore heart function efficiently.
+                    </p>
+
+                    <ul>
+                        <li>
+                            TargaCell's protein biologic products solve these problems by directing
+                            or targeting 10x the number of stem cells to the heart, without a catheter,
+                            and causing them to stay there long enough to repair damaged tissue
+                            and restore function, as compared to the current inefficient stem cell
+                            delivery using heart catheter-based injection of stem cells into the heart
+                            wall or coronary vessels.
+                        </li>
+                        <li>
+                            The more stem cells are delivered, the more stem cells are retained, the
+                            faster the repair, and the more likely the treatment will achieve complete
+                            restoration of function for patients suffering a heart attack and prevent
+                            progression to heart failure.
+                        </li>
+                        <li>
+                            Current methods result in less than 1% delivery and retention of the stem
+                            cells injected into the heart wall. TargaCell's delivery methods enable
+                            40-70% of the stem cells administered intravenously to be delivered to
+                            the heart wall.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question-wrapper">
+                <div class="question">
+                    <span>5.</span>
+                    <div>
+                        What types of stem cells are used in heart repair & where do they come
+                        from?
+                    </div>
+                    <i class="fa fa-chevron-down"></i>
+                    <i class="fa fa-chevron-up"></i>
+                </div>
+                <div class="answer">
+                    <p>
+                        These adult stem cells harvested or derived from adult tissues, blood, etc.,
+                        after birth, can be derived from several tissues, including but not limited to
+                        bone marrow and umbilical cord blood.
+                    </p>
+
+                    <ul>
+                        <li>
+                            The stem cells used are either autologous or allogeneic:
+                            <ul>
+                                <li>
+                                    Autologous means the source of the stem cells is the patient,
+                                </li>
+                                <li>
+                                    Allogeneic means the source of stem cells comes from another person, not the patient to be treated.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            CD34+ stem cells:
+                            <ul>
+                                <li>
+                                    CD34+ stem cells are blood-forming or hematopoietic stem cells,
+                                    which can also form blood vessels and other types of cells in the body.
+                                </li>
+                                <li>
+                                    Autologous CD34+ stem cells can be harvested directly from the bone
+                                    marrow or blood after mobilizing or inducing them to move from the
+                                    bone marrow into the blood using well-established clinical protocols.
+                                </li>
+                                <li>
+                                    Purified CD34+ stem cell populations are produced from these collec-
+                                    tions in a hospital cell therapy laboratory.
+                                </li>
+                                <li>
+                                    For preclinical validation studies, CD34+ stem cells will be purchased
+                                    from commercial stem cell suppliers for validation and safety studies.
+                                </li>
+                                <li>
+                                    For clinical trials, CD34+ stem cells will be purified from the patient’s
+                                    bone marrow and used in compliance with standard clinical treatment
+                                    protocols or custom-manufactured in accordance with GMP
+                                    regulations approved by the FDA.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Mesenchymal stem cells (MSCs):
+                            <ul>
+                                <li>
+                                    MSCs are non-hematopoietic adult stem cells isolated from different
+                                    sources that can differentiate into other types of cells in the body.
+                                    These sources include but are not limited to, bone marrow, fat
+                                    (adipose tissue), umbilical cord tissue (Wharton's Jelly), placenta, or
+                                    amniotic fluid (the fluid surrounding a fetus).
+                                </li>
+                                <li>
+                                    MSCs can be allogeneic (from unrelated donors).
+                                </li>
+                                <li>
+                                    Allogeneic MSCs can be purchased from stem cell manufacturing
+                                    companies or custom-manufactured by a stem cell company in
+                                    accordance with GMP regulations approved by the FDA.
+                                </li>
+                                <li>
+                                    Autologous MSCs derived and grown from the patient's tissues may
+                                    not be required for heart repair therapy. However, if needed, they can
+                                    be produced in a hospital cell therapy laboratory.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="question-wrapper">
+                <div class="question">
+                    <span>6.</span>
+                    <div>
+                        How does TargaCell's technology work? What is the mechanism of action?
+                    </div>
+                    <i class="fa fa-chevron-down"></i>
+                    <i class="fa fa-chevron-up"></i>
+                </div>
+                <div class="answer">
+                    <p>
+                        TargaCell's simple therapeutic protocol for sending stem cells to the
+                        heart is:
+                    </p>
+                    <ul>
+                        <li>
+                            Intravenous TCC 100, followed by intravenous CD34+stem cells, sends
+                            these cells to the heart.
+                        </li>
+                        <li>
+                            While intravenous TCC 200, followed by intravenous MSCs, sends these
+                            cells to the heart.
+                        </li>
+                        <li>
+                            BOTH TCC 100 & 200 (protein biologics), administered intravenously,
+                            prevent or block the lungs & liver from trapping both types of stem cells!
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ask-us">
+                <h2>Ask your Question</h2>
+                <p>
+                    If you cannot find the answer above, please message us in fillable boxes
+                    below:
+                </p>
+
+                {%  embed "../components/contact-form.twig" with {form_name: "FAQ"} %}{% endembed %}
+            </div>
+        </div>
+    </div>
 {% endblock %}

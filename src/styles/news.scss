@@ -1,1 +1,23 @@
 @use "sass/all";
+@use "components/blog-entry";
+
+#content {
+  display: flex;
+  gap: all.$spaceMedium;
+  padding-bottom: all.$spaceExtraExtraLarge;
+
+  .left-side {
+    flex: 1;
+
+    .blog-entry {
+      margin-top: all.$spaceExtraExtraLarge;
+    }
+  }
+
+  .right-side {
+    width: 35%;
+    max-width: 300px;
+    background: url("../images/news/blog_logo.png") repeat-y top center;
+    background-size: 100% auto;
+  }
+}

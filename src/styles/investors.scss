@@ -23,9 +23,26 @@
     max-width: 30%;
     width: 300px;
 
-    img {
+    & > img {
       width: 90%;
       margin: 0 auto;
+    }
+
+    .executive-summary {
+      text-align: center;
+      margin: all.$spaceMedium auto;
+
+      p {
+        font-size: all.$fontSize5;
+        line-height: all.$bodyLineHeight;
+        color: all.$linkColor;
+      }
+
+      img {
+        margin: all.$spaceExtraSmall auto;
+        border: 1px solid all.$black;
+        box-shadow: 6px 6px 12px -4px all.$black;
+      }
     }
   }
 
@@ -33,4 +50,11 @@
       flex: 1;
       margin-left: all.$spaceMedium;
   }
+}
+
+.summary-footnote {
+  margin-top: 0;
+  font-size: all.$fontSize5;
+  color: all.$primary;
+  font-style: italic;
 }

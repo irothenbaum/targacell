@@ -1,0 +1,43 @@
+@use "../sass/all";
+
+.blog-entry {
+  position: relative;
+  text-align: left;
+
+  p.in-blog {
+    margin: all.$spaceSmall 0;
+    text-align: left;
+    font-size: all.$fontSize5;
+    color: all.$darkGrey;
+  }
+
+  h4.title {
+    font-size: all.$fontSize3;
+    line-height: all.$bodyLineHeight;
+    font-family: all.$fontFamilyBodyBold;
+  }
+
+  div.description {
+    p {
+      margin-top: all.$spaceSmall;
+    }
+  }
+
+  a.button.more-link {
+    min-width: 0;
+    padding: all.$spaceExtraExtraSmall all.$spaceExtraSmall;
+    text-transform: none;
+    margin-top: all.$spaceMedium;
+
+    &:after {
+      content: '>';
+      display: inline-block;
+      margin-left: all.$spaceExtraExtraSmall;
+      transition: margin all.$transition;
+    }
+
+    &:hover:after {
+      margin-left: all.$spaceSmall;
+    }
+  }
+}

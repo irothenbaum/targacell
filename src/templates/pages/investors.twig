@@ -29,9 +29,20 @@
     <div class="section form-wrapper">
         <div>
             <img src="./images/heart.png" alt="Heart logo" />
-            <div>PLACE HOLDER</div>
+            <div class="executive-summary">
+                <a href="./files/2024_ExecutiveSummary.jpg">
+                    <p>Executive Summary</p>
+                    <img src="./images/investors/executive_summary_thumbnail.jpg" alt="Executive Summary" />
+                </a>
+            </div>
         </div>
 
-        {%  embed "../components/contact-form.twig" with {form_name: "Investors Form"} %}{% endembed %}
+        {%  embed "../components/contact-form.twig" with {form_name: "Investors Form"} %}
+            {%  block footer %}
+                <p class="summary-footnote">
+                    Executive Summary automatically emailed when you click "Send Message"
+                </p>
+            {%  endblock %}
+        {% endembed %}
     </div>
 {% endblock %}

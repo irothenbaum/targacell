@@ -5,6 +5,11 @@
     <link rel="stylesheet" href="./styles/contact.css"/>
 {% endblock %}
 
+{% block scripts %}
+    {{ parent() }}
+    <script src="./scripts/contact.js"></script>
+{% endblock %}
+
 {% block breadcrumbs_content %}
     <span>Contact</span>
 {% endblock %}

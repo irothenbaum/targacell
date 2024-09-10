@@ -1,6 +1,77 @@
 @use "sass/all";
 @use "components/blog-card";
 
+.milestones {
+  @include all.flex-row();
+  gap: all.$spaceMedium;
+
+  .copy {
+    flex: 1;
+    text-align: left;
+  }
+
+  img {
+    width: 40%;
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+
+  h2 {
+    @include all.subtitleText();
+    color: all.$primaryDark;
+    margin-bottom: all.$spaceLarge;
+  }
+
+  p {
+    margin-top: all.$spaceMedium;
+
+    strong {
+      font-family: all.$fontFamilyBodyBold;
+    }
+  }
+
+  ul {
+    margin-top: all.$spaceSmall;
+    padding-left: all.$spaceMedium;
+
+    li {
+      list-style: disc;
+    }
+  }
+}
+
+.top-publication {
+  h2 {
+    @include all.subtitleText();
+    color: all.$primaryDark;
+  }
+
+  p {
+    margin: all.$spaceLarge 0;
+    font-family: all.$fontFamilyBodyBold;
+  }
+
+  div {
+    text-align: left;
+    width: 33%;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+    }
+
+    p {
+      margin: all.$spaceSmall 0;
+      color: all.$darkGrey;
+    }
+    h4 {
+      font-size: all.$fontSize3;
+      font-family: all.$fontFamilyBodyBold;
+      color: all.$primaryDark;
+    }
+  }
+}
+
 
 .mini-blog {
   display: flex;

@@ -12,6 +12,7 @@
 
       label {
         display: inline-block;
+        font-family: all.$fontFamilyBodyBold;
         margin-right: all.$spaceSmall;
         font-size: all.$fontSize3;
       }
@@ -30,6 +31,7 @@
     label {
       font-size: all.$fontSize3;
       display: block;
+      font-family: all.$fontFamilyBodyBold;
       text-align: left;
     }
 
@@ -37,11 +39,15 @@
       margin-top: all.$spaceSmall;
       width: 100%;
       border: 1px solid all.$primary;
-      min-height: 200px;
+      min-height: 300px;
     }
   }
 
   .button-container {
     margin-top: all.$spaceLarge;
+
+    .button {
+      border: none;
+    }
   }
 }

@@ -10,5 +10,41 @@
 {% endblock %}
 
 {% block content %}
+    <div class="left-side" data-max-heights="news">
+        {% embed '../components/blog-entry.twig' with {
+            date: "August 10, 2022",
+            image: "./images/headshots/catherine_phillips.jpg",
+            title: "Welcome to TargaCell",
+            description: "<p>Welcome to TargaCell.com. I am Cathy Phillips, the CEO of TargaCell. We are dedicated to delivering stem cells to repair broken hearts! At TargaCell, we are committed to alleviating the pain and suffering from heart disease — heart attacks and heart failure. My co-founder, Robin McWherter, and I have experienced firsthand what happens after a [...}</p>",
+            link: "https://TODOTHIS.com",
+        } %}
+        {% endembed %}
+        {% embed '../components/blog-entry.twig' with {
+            date: "August 22, 2022",
+            image: "./images/blog/win_top_awards.jpg",
+            title: "Rosalind Franklin University And The SmartHealth Activator Host Inaugural Biotech Business Plan Competition: Three Women Executives Win top Awards",
+            description: "<p>NORTH CHICAGO, ILLINOIS — Rosalind Franklin University of Medicine and Science, in collaboration with the SmartHealth Activator, a Midwest healthcare ventures accelerator, held collaboration with the SmartHealth Activator, a Midwest healthcare ventures accelerator, held the inaugural Chicagoland Biotech Startup Business Plan Competition on July 21. This startup training and competition — which was staged virtually — featured 15 Chicago teams/ventures in categories that included therapeutics, medical [...}</p>",
+            link: "https://TODOTHIS.com",
+        } %}
+        {% endembed %}
+        {% embed '../components/blog-entry.twig' with {
+            date: "August 22, 2022",
+            image: "./images/blog/incubator_building.jpg",
+            title: "Rosalind Franklin’s Helix 51 Incubator Attracts handful Of New Businesses; “This Keeps Everything Growing Here, From The Startups To The Big Guys”",
+            description: "<p>Scientists and entrepreneurs using stem cell research to repair damaged hearts and kill cancer cells, as well as other health science technology, are part of the rapid growth of Rosalind Franklin University’s Helix 51 business incubator.</p><p>“We’re repairing hearts,” said Catherine Phillips, the CEO of TargaCell, a Helix tenant since August. “Once a heart is [...}</p>",
+            link: "https://TODOTHIS.com",
+        } %}
+        {% endembed %}
+        {% embed '../components/blog-entry.twig' with {
+            date: "July 1, 2024",
+            image: "./images/blog/funding_anniversary.jpg",
+            title: "TargaCell Corporation, a Chicago biotech, celebrates the first anniversary of the founding of its Polish-American joint venture, Target Cells Sp z o o",
+            description: "<p style=\"font-style:italic;\">Stem cells to the heart's rescue. TargaCell USA and Target Cells Poland are pioneering a globally unique technology for targeted cell therapy for heart regeneration, advancing regenerative medicine to be more successful.</p><h4>INTRODUCTION</h4><p>TargaCell Corporation, a Chicago biotech, to be located at the Helix 51 Incubator at the Rosalind Franklin University of Medicine & Sciences, celebrates the first anniversary of the founding of its Polish-American joint venture, Target Cells Sp. z o.o.</p>",
+            link: "https://TODOTHIS.com",
+        } %}
+        {% endembed %}
+    </div>
+    <div class="right-side" data-max-heights="news">
 
+    </div>
 {% endblock %}

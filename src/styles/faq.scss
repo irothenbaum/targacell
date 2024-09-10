@@ -1,1 +1,168 @@
 @use "sass/all";
+@use "components/contact-form";
+
+.header {
+  h1 {
+    @include all.titleText();
+    color: all.$primaryDark;
+  }
+
+  h4 {
+    font-family: all.$fontFamilyBodyBold;
+    margin-top: all.$spaceMediumLarge;
+  }
+}
+
+
+.faq-container {
+  display: flex;
+  flex-direction: row;
+  gap: all.$spaceLarge;
+
+  .left-side {
+    width: 30%;
+
+    .panel {
+      text-align: left;
+      padding: all.$spaceMedium;
+      width: 100%;
+      background-color: all.$nearWhite;
+      box-shadow: 10px 10px 10px 0 rgba(0,0,0,0.1);
+
+      h3 {
+        font-size: all.$fontSize3;
+        font-family: all.$fontFamilyBodyBold;
+        margin-bottom: all.$spaceLarge;
+      }
+
+      p {
+        margin-bottom: all.$spaceMedium;
+        strong {
+          font-family: all.$fontFamilyBodyBold;
+        }
+      }
+
+      .learn-more {
+        margin-top: all.$spaceMedium;
+        p {
+          font-family: all.$fontFamilyBodyBold;
+          margin-bottom: all.$spaceExtraSmall;
+        }
+        .button {
+          min-width: 0;
+          padding: all.$spaceExtraSmall all.$spaceSmall;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      margin-top: all.$spaceExtraExtraLarge;
+    }
+  }
+
+  .right-side {
+    flex: 1;
+
+    .question-wrapper {
+      margin-bottom: all.$spaceMedium;
+      text-align: left;
+
+      .question {
+        cursor: pointer;
+        padding: all.$spaceMedium all.$spaceSmall;
+        display: flex;
+        gap: all.$spaceExtraSmall;
+        background-color: all.$lightGrey;
+        align-items: flex-start;
+        justify-content: space-between;
+        font-family: all.$fontFamilyBodyBold;
+
+        span {
+          flex-grow: 0;
+        }
+
+        div {
+          flex: 1;
+        }
+
+        i {
+          align-self: flex-end;
+
+          &.fa-chevron-up {
+            display: none;
+          }
+        }
+      }
+
+      .answer {
+        padding: all.$spaceMedium;
+        display: none;
+
+        p, ul {
+          margin-bottom: all.$spaceMedium;
+        }
+        ul {
+          padding-left: all.$spaceMedium;
+
+          li {
+            list-style: disc;
+            margin-bottom: all.$spaceSmall;
+
+            li {
+              list-style: none;
+              padding-left: all.$spaceMedium;
+              position: relative;
+
+              &:before {
+                content: "-";
+                position: absolute;
+                top: 0;
+                left: 0;
+              }
+            }
+          }
+        }
+      }
+
+      &.open {
+        .question {
+          i {
+            &.fa-chevron-down {
+              display: none;
+            }
+            &.fa-chevron-up {
+              display: block;
+            }
+          }
+        }
+
+        .answer {
+          display: block;
+        }
+      }
+    }
+
+    .ask-us {
+      margin-top: all.$spaceExtraLarge;
+      text-align: left;
+
+      & > h2 {
+        @include all.titleText();
+      }
+      & > p {
+        font-family: all.$fontFamilyBodyBold;
+        margin: all.$spaceMediumLarge 0;
+      }
+    }
+  }
+
+  .contact-form {
+    text-align: center;
+
+    label {
+      font-size: all.$fontSize4 !important;
+    }
+  }
+}
