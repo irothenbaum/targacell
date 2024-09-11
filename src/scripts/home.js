@@ -1,21 +1,24 @@
 (function($, window) {
-  let $counter
-  let count = 0
   $(document).ready(function() {
-    $counter = $('#counter')
-    countStep()
+    $('.counter').each(function(i, elem) {
+      countStep($(elem))
+    })
 
     configureGallery()
   })
 
-  function countStep() {
+  function countStep($counter, count = 0) {
+    let to = parseFloat($counter.data('to'))
     setTimeout(function() {
-      $counter.text(count)
-      count++
-      if (count <= 10) {
-        countStep()
+      $counter.text(count % 1 === 0 ? count : count.toFixed(1))
+      if (count <= to) {
+        let nextCount = count + Math.max(0.1, (to - count) / to)
+        countStep($counter, nextCount)
+      } else {
+        $counter.text(to)
       }
-    }, 50 + (count * 30))
+      // this lets us slowly approach the final value
+    }, 50)
   }
 
   function configureGallery() {

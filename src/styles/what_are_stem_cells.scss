@@ -1,1 +1,110 @@
 @use "sass/all";
+@use "sass:math";
+
+.main-container {
+  display: flex;
+  gap: all.$spaceMedium;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0;
+
+  .left-side {
+    flex: 1;
+    div {
+      padding: 0 all.$spaceExtraLarge;
+      background-color: all.$lightGrey;
+      width: 100%;
+      margin-bottom: all.$spaceLarge;
+      text-align: center;
+
+      $triangleSize: 4rem;
+      $halfTriangleSize: math.div($triangleSize, 2);
+      a {
+        display: block;
+        position: relative;
+        cursor: pointer;
+
+        &:before {
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        &:after {
+          width: 0;
+          height: 0;
+          top: calc(50% - $halfTriangleSize);
+          left: calc(50% - $halfTriangleSize);
+          border-top:  $halfTriangleSize solid transparent;
+          border-left: $triangleSize  solid rgba(255, 255, 255, 0.8);
+          border-bottom:  $halfTriangleSize solid transparent;
+          z-index: 10;
+        }
+
+        &:after, &:before {
+          content: "";
+          opacity: 0;
+          position: absolute;
+          transition: opacity all.$transition;
+        }
+
+        &:hover {
+          &:after, &:before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .right-side {
+    flex: 1;
+    text-align: left;
+
+    h1 {
+      @include all.titleText();
+      color: all.$primaryDark;
+      margin-bottom: all.$spaceLarge;
+    }
+
+    p, ul {
+      margin-bottom: all.$spaceMedium;
+      &.list-header {
+        font-family: all.$fontFamilyBodyBold;
+        margin-bottom: 0;
+      }
+    }
+    ul {
+      @include all.bulleted-list();
+    }
+  }
+}
+
+.learn-more {
+  margin-top: all.$spaceExtraLarge;
+  border-top: 4px solid all.$primaryLight;
+  padding-top: all.$spaceExtraLarge;
+
+  text-align: center;
+
+  h2 {
+    @include all.subtitleText();
+    margin-bottom: all.$spaceLarge;
+  }
+
+  .button {
+    margin-bottom: all.$spaceExtraLarge;
+  }
+
+  img {
+    margin: 0 auto;
+    max-width: 400px;
+  }
+}

@@ -104,25 +104,7 @@
           margin-bottom: all.$spaceMedium;
         }
         ul {
-          padding-left: all.$spaceMedium;
-
-          li {
-            list-style: disc;
-            margin-bottom: all.$spaceSmall;
-
-            li {
-              list-style: none;
-              padding-left: all.$spaceMedium;
-              position: relative;
-
-              &:before {
-                content: "-";
-                position: absolute;
-                top: 0;
-                left: 0;
-              }
-            }
-          }
+          @include all.bulleted-list();
         }
       }
 

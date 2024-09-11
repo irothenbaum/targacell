@@ -32,11 +32,7 @@
 
   ul {
     margin-top: all.$spaceSmall;
-    padding-left: all.$spaceMedium;
-
-    li {
-      list-style: disc;
-    }
+    @include all.bulleted-list()
   }
 }
 

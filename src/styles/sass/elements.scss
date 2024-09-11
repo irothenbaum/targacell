@@ -33,3 +33,25 @@
     width: 100%;
   }
 }
+
+@mixin bulleted-list {
+  padding-left: layout.$spaceMedium;
+
+  li {
+    list-style: disc;
+    margin-bottom: layout.$spaceSmall;
+
+    li {
+      list-style: none;
+      padding-left: layout.$spaceMedium;
+      position: relative;
+
+      &:before {
+        content: "-";
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
