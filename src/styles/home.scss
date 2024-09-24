@@ -41,15 +41,15 @@
   & > .tile {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: all.$spaceMedium;
     color: all.$white;
     flex: 1;
     font-size: all.$fontSize3;
 
-    i {
-      font-size: all.$fontSize1;
+    img {
+      height: all.$fontSize1;
     }
 
     p {

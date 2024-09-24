@@ -8,18 +8,6 @@ https://www.dropbox.com/scl/fo/2v6zhk7mo7d7qq60abd9a/ACUQBTch9PICgPOgyoAAybk?rlk
 
 ## Thing I need / notice:
 
-#### Generally:
-- What's the body font?
-  - **A:** Raleway
-- Where do the Facebook and LinkedIn links in Footer go to?
-
-#### HOME:
-- Hero image is a different color than the designs
-- Missing icons for the various cards on the page
-- Quotation marks on Testimonials (could maybe just tell me the font?)
-  - **A:** Aviano Flare, Jackie can create an image if needed
-
-
-#### NEWS:
-- Where do the `Continue Reading` links go to?
+- DouglasHeld_BIO.pdf missing
+- Missing First 3 Home page icons (Universal Delivery, Safe & Efficient, Stem Cell Delivery)
 

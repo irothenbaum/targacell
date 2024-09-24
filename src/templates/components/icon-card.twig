@@ -2,7 +2,10 @@
     {% if max_heights %}data-max-heights="{{ max_heights }}"{% endif %}
     {% if min_widths %}data-min-widths="{{ min_widths }}"{% endif %}
 >
-    <i class="fas {{ icon }}"></i>
+    <div class="icon">
+        <img class="primary" src="./images/icons/{{ icon }}_primary.png" />
+        <img class="white" src="./images/icons/{{ icon }}_white.png" />
+    </div>
     <h3>{{ title }}</h3>
     <div class="small-divider"></div>
     {% block body %}

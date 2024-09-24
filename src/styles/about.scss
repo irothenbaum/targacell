@@ -12,6 +12,14 @@
   img {
     width: 40%;
     margin-left: all.$spaceMedium;
+
+    animation: gelatine 0.6s;
+
+    &:hover {
+      animation: none;
+      transition: transform all.$transition;
+      transform: scale(1.05, 1.05);
+    }
   }
 
   div {
@@ -66,11 +74,11 @@
   & > div.left {
     position: relative;
     flex: 0;
-    .year-text {
-      font-size: 18rem;
-      line-height: 0.7em;
-      opacity: 0.05;
-      color: all.$primaryDark;
+
+    .year-text img {
+      width: 230px;
+      max-width: none;
+      height: auto;
     }
 
     .text-over {
@@ -80,7 +88,7 @@
       width: 100%;
 
       h2 {
-        margin-top: all.$spaceLarge;
+        margin-top: all.$spaceExtraLarge;
         text-align: left;
         text-transform: uppercase;
         color: all.$primaryDark;
@@ -169,4 +177,11 @@
       @include all.hover-underline();
     }
   }
+}
+
+@keyframes gelatine {
+  from, to { transform: scale(1, 1); }
+  25% { transform: scale(0.9, 1.1); }
+  50% { transform: scale(1.1, 0.9); }
+  75% { transform: scale(0.95, 1.05); }
 }

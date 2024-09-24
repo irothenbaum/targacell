@@ -1,5 +1,7 @@
 @use "../sass/all";
 
+$iconSize: 3.5rem;
+
 div.icon-card {
   width: 100%;
   background-color: all.$nearWhite;
@@ -7,9 +9,27 @@ div.icon-card {
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   padding: all.$spaceExtraLarge all.$spaceLarge;
+  transition: all all.$transition;
 
-  i {
-    font-size: 3rem;
+  .icon {
+    margin: 0 auto;
+    width: $iconSize;
+    height: $iconSize;
+    position: relative;
+
+    img {
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      transition: opacity all.$transition;
+
+      &.white {
+        opacity: 0;
+      }
+    }
   }
 
   h3 {
@@ -21,13 +41,23 @@ div.icon-card {
     height: 2px;
     background-color: all.$bodyColor;
     margin: all.$spaceSmall auto;
+    transition: all.$transition;
   }
 
-  &:nth-child(1) {
+  &:hover {
     background-color: all.$primary;
     color: all.$white;
     .small-divider {
       background-color: all.$white;
+    }
+
+    .icon img {
+      &.white {
+        opacity: 1;
+      }
+      &.primary {
+        opacity: 0;
+      }
     }
   }
 }
