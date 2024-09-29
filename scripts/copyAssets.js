@@ -3,7 +3,7 @@ const path = require("path")
 const {BUILD_DIR, SRC_DIR} = require("./constants")
 
 async function copyAssets() {
-  const assetDirectories = ['images', 'fonts', 'scripts']
+  const assetDirectories = ['images', 'fonts', 'scripts', 'files']
 
   for (const dir of assetDirectories) {
     copyAllFilesInDir(path.join(SRC_DIR, dir), path.join(BUILD_DIR, dir))

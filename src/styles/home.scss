@@ -236,15 +236,19 @@
               padding-right: 0;
             }
 
+            $quoteSize: 2rem;
+
             &:before, &:after {
-              content: '\201C';
-              font-size: 6rem;
-              color: all.$primary;
-              vertical-align: -3rem;
-              line-height: 0;
+              content: '';
+              display: inline-block;
+              height: $quoteSize;
+              width: $quoteSize;
+              overflow: visible;
+              background: url('../images/icons/end_quote_primary.png') no-repeat center center;
+              background-size: contain;
             }
-            &:after {
-              content: '\201D';
+            &:before {
+              transform: rotate(180deg);
             }
           }
         }

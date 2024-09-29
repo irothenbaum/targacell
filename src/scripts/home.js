@@ -1,7 +1,12 @@
 (function($, window) {
   $(document).ready(function() {
     $('.counter').each(function(i, elem) {
-      countStep($(elem))
+      window.onElementInView(elem, () => {
+        // wait a second, then start the counter
+        setTimeout(() => {
+          countStep($(elem))
+        }, 1000)
+      })
     })
 
     configureGallery()

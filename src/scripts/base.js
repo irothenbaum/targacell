@@ -58,4 +58,24 @@
       alreadyComputed[attr] = lookup
     }, 100)
   }
+
+  function onElementInView(element, callback) {
+    // Create a new IntersectionObserver
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        // Check if the element is in view
+        if (entry.isIntersecting) {
+          // Call the callback function
+          callback();
+          // Optionally stop observing the element after it's in view
+          observer.unobserve(element);
+        }
+      });
+    });
+
+    // Start observing the element
+    observer.observe(element);
+  }
+
+  window.onElementInView = onElementInView
 })(jQuery, window, undefined)
