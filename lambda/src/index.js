@@ -22,7 +22,8 @@ exports.handler = async (event) => {
 
   try {
     // Deconstruct body params
-    const {form_name, name, phone, email, subject, message} = JSON.parse(event.body)
+    const body = event.isBase64Encoded ? Buffer.from(event.body, 'base64').toString('utf-8') : event.body
+    const {form_name, name, phone, email, subject, message} = JSON.parse(body)
 
     // Email options
     const mailOptions = {
