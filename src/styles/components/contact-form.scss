@@ -2,9 +2,9 @@
 
 .contact-form-container {
   .form-row {
-    @include all.flex-row();
     margin-bottom: all.$spaceMediumLarge;
     gap: all.$spaceMediumLarge;
+    @include all.flex-row();
 
     & > div {
       display: flex;

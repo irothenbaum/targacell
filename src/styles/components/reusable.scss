@@ -10,6 +10,10 @@
   width: 100%;
   max-width: all.$outerContentWidth;
   margin: 0 auto;
+
+  @include all.small-and-below {
+    padding: 0 all.$spaceSmall;
+  }
 }
 
 .button {
@@ -30,6 +34,10 @@
 .section {
   margin: all.$spaceExtraExtraLarge auto;
   text-align: center;
+
+  @include all.small-and-below {
+    padding: 0 all.$spaceSmall;
+  }
 }
 
 .text-link {
@@ -39,5 +47,21 @@
 
   &:hover {
     color: all.$primary;
+  }
+}
+
+.mobile-only {
+  display: none;
+
+  @include all.small-and-below() {
+    display: block;
+  }
+}
+
+.desktop-only {
+  display: none;
+
+  @include all.medium-and-up() {
+    display: block;
   }
 }

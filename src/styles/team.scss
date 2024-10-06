@@ -14,8 +14,8 @@
 
 
   &.cathy-and-robin {
-    @include all.flex-row();
     margin: all.$spaceExtraExtraLarge auto;
+    @include all.flex-row();
 
     img, div {
       flex: 1;

@@ -15,8 +15,8 @@
 }
 
 .form-wrapper {
-  @include all.flex-row();
   align-items: flex-start;
+  @include all.flex-row();
 
   & > div:first-child {
     text-align: center;

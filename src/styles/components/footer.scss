@@ -8,9 +8,9 @@
 
   .top-section {
     padding: all.$spaceLarge all.$spaceMedium;
-    @include all.flex-row();
     justify-content: space-between;
     margin-bottom: all.$spaceExtraLarge;
+    @include all.flex-row();
 
     .nav {
       a {
@@ -75,5 +75,34 @@
     background-color: all.$primaryExtraDark;
     color: all.$primaryExtraLight;
   }
+}
 
+@include all.small-and-below {
+  #page-footer {
+    .bottom-section {
+      img {
+        height: 2rem;
+      }
+    }
+
+    .contact {
+      margin-top: all.$spaceMedium;
+
+      $size: 32px;
+      a {
+        height: $size !important;
+        width: $size !important;
+        line-height: $size !important;
+        font-size: all.$fontSize4 !important;
+        margin-left: all.$spaceMedium !important;
+
+        &.poland {
+          &:after {
+            bottom: - $size * .75 !important;
+          }
+        }
+      }
+
+    }
+  }
 }

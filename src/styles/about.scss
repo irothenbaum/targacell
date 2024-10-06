@@ -37,9 +37,9 @@
 }
 
 .row {
-  @include all.flex-row();
   gap: all.$spaceMedium;
   margin-bottom: all.$spaceMedium;
+  @include all.flex-row();
 }
 
 .technology {
@@ -127,9 +127,9 @@
   }
 
   .section {
-    @include all.flex-row();
     margin: all.$spaceExtraLarge 0;
     gap: all.$spaceMedium;
+    @include all.flex-row();
   }
 
 }

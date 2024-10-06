@@ -15,9 +15,9 @@ $iconSize : 2rem;
     margin-top: all.$spaceSmall;
 
     div {
-      @include all.flex-row();
       justify-content: flex-start;
       gap: all.$spaceExtraSmall;
+      @include all.flex-row();
 
       & > a {
         height: $iconSize;

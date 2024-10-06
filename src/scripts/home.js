@@ -9,6 +9,11 @@
       })
     })
 
+    const $header = $('#mobile-header')
+    $header.click(() => {
+      $('body').toggleClass('nav-open')
+    })
+
     configureGallery()
   })
 

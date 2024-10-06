@@ -2,8 +2,8 @@
 @use "components/blog-card";
 
 .milestones {
-  @include all.flex-row();
   gap: all.$spaceMedium;
+  @include all.flex-row();
 
   .copy {
     flex: 1;

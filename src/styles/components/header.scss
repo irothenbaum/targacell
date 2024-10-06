@@ -2,18 +2,16 @@
 
 #page-header {
   width: 100%;
+  background: all.$white;
 
-  & > .outer-content-width {
+  .outer-content-width {
+    background: all.$white;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
 
     align-items: flex-end;
     padding: all.$spaceLarge;
-
-    @media screen and (max-width: all.$screenSmallMax) {
-      flex-direction: column;
-    }
   }
 
   img {
@@ -52,6 +50,87 @@
 
       &:hover {
         background-color: all.$lightGrey;
+      }
+    }
+  }
+
+  #mobile-header {
+    padding: all.$spaceSmall;
+    text-align: center;
+
+    * {
+      display: inline-block;
+    }
+
+    i {
+      position: absolute;
+      top: all.$spaceSmall;
+      left: all.$spaceSmall;
+      font-size: all.$spaceMediumLarge;
+      color: all.$bodyColor;
+
+      @include all.hover-cta();
+
+      &.fa-x {
+        display: none;
+      }
+    }
+  }
+}
+
+
+@include all.small-and-below() {
+  #page-header {
+    .outer-content-width {
+      display: none;
+      flex-direction: column;
+      width: 100vw;
+      height: calc(100% - 62px); // 62px is the mobile-header height
+      align-items: center;
+
+      .nav {
+        flex-direction: column;
+        margin-left: 0;
+
+        font-size: all.$fontSize3;
+        a {
+          margin-top: all.$spaceMedium;
+          margin-left: 0;
+        }
+      }
+
+      .contact {
+        margin-bottom: all.$spaceLarge;
+
+        a {
+          display: block;
+          margin-top: all.$spaceMedium;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  body.nav-open {
+    #page-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1000;
+
+      #mobile-header {
+        i.fa-x {
+          display: inline-block
+        }
+        i.fa-bars {
+          display: none;
+        }
+      }
+
+      .outer-content-width {
+        display: flex;
       }
     }
   }

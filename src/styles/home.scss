@@ -13,6 +13,7 @@
     justify-content: flex-start;
     align-items: center;
     height: 100%;
+    width: 100%;
   }
 
   .hero-inner {
@@ -34,9 +35,9 @@
 }
 
 .tiles-container {
-  @include all.flex-row();
   transform: translateY(-50%);
   margin-bottom: - all.$spaceExtraExtraLarge;
+  @include all.flex-row();
 
   & > .tile {
     display: flex;
@@ -99,9 +100,9 @@
 }
 
 .discover {
-  @include all.flex-row();
   align-items: flex-start;
   gap: all.$spaceMedium;
+  @include all.flex-row();
 
   & > div {
     width: 100%;
@@ -131,18 +132,16 @@
 }
 
 .three-cards {
-  @include all.flex-row();
   justify-content: space-evenly;
   gap: all.$spaceMedium;
-
-
+  @include all.flex-row();
 }
 
 .corporation {
-  @include all.flex-row();
   overflow: hidden;
   justify-content: space-between;
   padding: all.$spaceLarge;
+  @include all.flex-row();
 
   & > img {
     width: 60%;
@@ -286,6 +285,83 @@
 
       &:last-child {
         margin-right: 0;
+      }
+    }
+  }
+}
+
+
+@include all.small-and-below() {
+  #hero {
+    height: 75vh;
+
+    & > .content-width {
+      display: block;
+
+      .hero-inner {
+        padding: all.$spaceLarge all.$spaceSmall 0;
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+
+        h1 {
+          font-size: all.$fontSize1;
+        }
+
+        h3 {
+          margin: all.$spaceMedium 0;
+        }
+      }
+    }
+  }
+
+  .tiles-container {
+    margin-bottom: 0;
+    transform: none;
+
+    & > .tile {
+      width: 100%;
+    }
+  }
+
+  .title-stitch {
+    img {
+      height: 2rem;
+    }
+  }
+
+  .corporation {
+    padding: all.$spaceSmall;
+
+    & > img {
+      width: 100%;
+    }
+    & > div {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  .testimonials {
+    p.cursive {
+      font-size: all.$fontSize1;
+      transform: translateY(0.75em);
+    }
+
+    .gallery-container {
+      img {
+        display: none;
+      }
+    }
+
+    p.quote {
+      font-size: all.$fontSize4 !important;
+
+      span.quotations {
+        &:before, &:after {
+          height: 1.5rem !important;
+          width: 1.5rem !important;
+        }
       }
     }
   }
