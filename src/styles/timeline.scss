@@ -70,10 +70,19 @@
 
 
 .mini-blog {
-  display: flex;
   gap: all.$spaceMedium;
+  @include all.flex-row();
 
   .blog-card {
     width: 100%;
+  }
+}
+
+
+@include all.small-and-below() {
+  .top-publication {
+    div {
+      width: 100%;
+    }
   }
 }

@@ -1,10 +1,19 @@
 (function($, window) {
   $(document).ready(function() {
-    maxHeights()
-    minHeights()
-    minWidths()
-    maxWidths()
-    $(window).on('resize', maxHeights)
+    // only do this on desktop
+    // NOTE: this 600 matches the $screenSmallMax in layout.scss
+    if (window.innerWidth > 600 ) {
+      maxHeights()
+      minHeights()
+      minWidths()
+      maxWidths()
+      $(window).on('resize', maxHeights)
+    }
+
+    const $header = $('#mobile-header')
+    $header.click(() => {
+      $('body').toggleClass('nav-open')
+    })
   })
 
   let alreadyComputed = {}

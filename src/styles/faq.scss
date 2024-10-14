@@ -15,9 +15,8 @@
 
 
 .faq-container {
-  display: flex;
-  flex-direction: row;
   gap: all.$spaceLarge;
+  @include all.flex-row();
 
   .left-side {
     width: 30%;
@@ -145,6 +144,20 @@
 
     label {
       font-size: all.$fontSize4 !important;
+    }
+  }
+}
+
+
+@include all.small-and-below() {
+  .faq-container {
+    .left-side {
+      width: 100%;
+
+      img {
+        width: 70%;
+        margin: all.$spaceExtraLarge auto all.$spaceMedium;
+      }
     }
   }
 }

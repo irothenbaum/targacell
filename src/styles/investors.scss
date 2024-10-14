@@ -58,3 +58,29 @@
   color: all.$primary;
   font-style: italic;
 }
+
+
+@include all.small-and-below() {
+  .intro {
+    margin-bottom: 0;
+  }
+
+  .form-wrapper {
+    margin-top: all.$spaceMedium;
+
+    & > div:first-child {
+      max-width: 100%;
+      width: 100%;
+      margin-bottom: all.$spaceExtraLarge;
+
+      & > img {
+        display: none;
+      }
+    }
+
+    & > div:last-child {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}

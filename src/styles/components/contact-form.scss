@@ -51,3 +51,11 @@
     }
   }
 }
+
+@include all.small-and-below() {
+  .contact-form-container {
+    .form-row {
+      align-items: flex-start;
+    }
+  }
+}

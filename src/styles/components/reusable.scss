@@ -35,8 +35,16 @@
   margin: all.$spaceExtraExtraLarge auto;
   text-align: center;
 
+  &:first-child {
+    margin-top: all.$spaceExtraLarge;
+  }
+
   @include all.small-and-below {
     padding: 0 all.$spaceSmall;
+
+    &:first-child {
+      margin-top: all.$spaceMedium;
+    }
   }
 }
 

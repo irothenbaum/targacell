@@ -8,13 +8,16 @@
 
   .top-section {
     padding: all.$spaceLarge all.$spaceMedium;
-    justify-content: space-between;
     margin-bottom: all.$spaceExtraLarge;
     @include all.flex-row();
 
+    & {
+      justify-content: space-between;
+    }
+
     .nav {
       a {
-        margin-left: all.$spaceSmall;
+        margin-right: all.$spaceSmall;
         @include all.hover-cta();
       }
     }

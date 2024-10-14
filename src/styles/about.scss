@@ -2,10 +2,6 @@
 @use "components/icon-card";
 @use "components/bio-card";
 
-.section:first-child {
-  margin-top: all.$spaceExtraLarge;
-}
-
 .intro-heart {
   @include all.flex-row();
 
@@ -75,20 +71,25 @@
     position: relative;
     flex: 0;
 
-    .year-text img {
-      width: 230px;
-      max-width: none;
-      height: auto;
+    .year-text {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+
+      img {
+        width: 230px;
+        max-width: none;
+        height: auto;
+      }
     }
 
     .text-over {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
+      position: relative;
+      z-index: 2;
 
       h2 {
-        margin-top: all.$spaceExtraLarge;
+        padding-top: all.$spaceExtraLarge;
         text-align: left;
         text-transform: uppercase;
         color: all.$primaryDark;
@@ -184,4 +185,43 @@
   25% { transform: scale(0.9, 1.1); }
   50% { transform: scale(1.1, 0.9); }
   75% { transform: scale(0.95, 1.05); }
+}
+
+
+@include all.small-and-below() {
+  .intro-heart {
+    img {
+      width: 70%;
+      margin: all.$spaceLarge 0 0;
+    }
+  }
+
+  .what-is-targacell {
+    display: block;
+
+    & > .left {
+      padding-bottom: all.$spaceLarge;
+    }
+    & > div.right {
+      padding: 0;
+
+      .image {
+        padding-top: 66%;
+      }
+    }
+  }
+
+  .bio-card {
+    margin-bottom: all.$spaceMedium;
+  }
+
+  .contact-us {
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    p {
+        font-size: all.$fontSize3;
+    }
+  }
 }

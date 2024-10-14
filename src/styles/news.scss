@@ -21,3 +21,21 @@
     background-size: 100% auto;
   }
 }
+
+@include all.small-and-below() {
+  #content {
+    padding: all.$spaceSmall;
+
+    .right-side {
+      display: none;
+    }
+
+    .left-side {
+      margin-bottom: all.$spaceLarge;
+
+      .blog-entry:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

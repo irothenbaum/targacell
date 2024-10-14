@@ -2,7 +2,6 @@
 @use "components/bio-card";
 
 .section {
-  margin: all.$spaceLarge 0;
   padding-bottom: all.$spaceMedium;
   border-bottom: 2px solid all.$primaryDark;
 
@@ -14,7 +13,6 @@
 
 
   &.cathy-and-robin {
-    margin: all.$spaceExtraExtraLarge auto;
     @include all.flex-row();
 
     img, div {
@@ -38,7 +36,7 @@
 
   &.leadership {
     & > img {
-      width: 16rem;
+      width: 40%;
       margin: 0 auto all.$spaceLarge;
     }
   }
@@ -68,5 +66,32 @@
     // 0.66 represents the 2 medium gaps between 3 items
     max-width: calc(33% - #{all.$spaceMedium * 0.66});
     margin-bottom: all.$spaceMedium;
+  }
+}
+
+
+@include all.small-and-below() {
+  .section {
+    &.cathy-and-robin {
+      & > div {
+        margin-top: all.$spaceMedium;
+        padding-left: 0;
+      }
+    }
+
+    &.leadership {
+      & > img {
+          width: 70%;
+      }
+    }
+  }
+
+
+  .headshot-gallery {
+    .bio-card {
+      // 0.5 represents the 1 medium gap between 2 items
+      max-width: calc(50% - #{all.$spaceMedium * 0.5});
+      margin-bottom: all.$spaceMedium;
+    }
   }
 }

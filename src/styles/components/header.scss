@@ -24,16 +24,12 @@
     align-items: center;
     flex-direction: row;
     margin-left: all.$spaceMedium;
+    gap: all.$spaceMedium;
 
     a {
-      margin-left: all.$spaceMedium;
       color: all.$bodyColor;
       flex: 1;
       @include all.hover-cta();
-
-      &:first-child {
-        margin-left: 0;
-      }
     }
   }
 
@@ -73,6 +69,31 @@
 
       &.fa-x {
         display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: all.$screenSmallMax) and (max-width: 1300px) {
+  #page-header {
+    .outer-content-width {
+      padding: 5rem all.$spaceMedium all.$spaceMedium;
+      position: relative;
+
+      .nav {
+        margin: 0 auto;
+      }
+
+      img, .contact {
+        position: absolute;
+        top: all.$spaceMedium;
+      }
+
+      img {
+        left: all.$spaceMedium;
+      }
+      .contact {
+        right: all.$spaceMedium;
       }
     }
   }

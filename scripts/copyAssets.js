@@ -8,6 +8,9 @@ async function copyAssets() {
   for (const dir of assetDirectories) {
     copyAllFilesInDir(path.join(SRC_DIR, dir), path.join(BUILD_DIR, dir))
   }
+
+  // last we copy root assets to the root folder
+  copyAllFilesInDir(path.join(SRC_DIR, 'rootAssets'), path.join(BUILD_DIR))
 }
 
 function copyAllFilesInDir(sourceDir, targetDir) {
