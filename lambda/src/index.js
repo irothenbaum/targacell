@@ -23,17 +23,15 @@ exports.handler = async (event) => {
   try {
     // Deconstruct body params
     const body = event.isBase64Encoded ? Buffer.from(event.body, 'base64').toString('utf-8') : event.body
+    console.log("Decoded body:", body)
     const {form_name, name, phone, email, subject, message} = JSON.parse(body)
 
     // Email options
     const mailOptions = {
       from: process.env.SENDER_EMAIL,
       to: process.env.TARGET_EMAIL,
-      subject: subject,
+      subject: `New Targacell "${form_name}" Form Submission`,
       text: `
-        Form Name:
-        ${form_name}
-        
         Name: 
         ${name}
         
@@ -42,6 +40,9 @@ exports.handler = async (event) => {
         
         Email: 
         ${email}
+        
+        Subject:
+        ${subject}
         
         Message: 
         ${message}

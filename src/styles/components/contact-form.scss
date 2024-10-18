@@ -45,9 +45,62 @@
 
   .button-container {
     margin-top: all.$spaceLarge;
+    position: relative;
+
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -1rem;
+      margin-top: -1rem;
+      font-size: all.$fontSize2;
+      z-index: 5;
+      color: all.$white;
+
+      animation: spin 2s infinite linear;
+    }
 
     .button {
       border: none;
+
+      &[disabled] {
+        background-color: all.$lightGrey;
+        color: all.$bodyColor;
+        cursor: not-allowed;
+      }
+
+      &.sending {
+        background-color: all.$primary;
+        color: all.$primary;
+      }
+    }
+  }
+
+  .alert {
+    margin-top: all.$spaceMedium;
+    background-color: #EBFFEFFF;
+    border-radius: all.$borderRadiusMedium;
+    padding: all.$spaceMedium;
+
+    .alert-heading {
+      font-family: all.$fontFamilyBodyBold;
+      font-size: all.$fontSize3;
+      margin-bottom: all.$spaceMedium;
+    }
+
+    &.error {
+      background-color: #ffe9e9;
+
+      .alert-heading {
+        color: #a20000;
+      }
+
+      a {
+        white-space: nowrap;
+        color: all.$primaryDark;
+        text-decoration: underline;
+        @include all.hover-cta();
+      }
     }
   }
 }
