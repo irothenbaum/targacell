@@ -27,9 +27,15 @@
     gap: all.$spaceMedium;
 
     a {
+      display: inline-block;
       color: all.$bodyColor;
       flex: 1;
       @include all.hover-cta();
+      @include all.hover-underline();
+
+      &:after {
+        background-color: all.$bodyColor;
+      }
     }
   }
 

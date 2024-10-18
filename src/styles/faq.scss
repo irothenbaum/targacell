@@ -18,6 +18,10 @@
   gap: all.$spaceLarge;
   @include all.flex-row();
 
+  & {
+    align-items: flex-start;
+  }
+
   .left-side {
     width: 30%;
 
@@ -150,7 +154,12 @@
 
 
 @include all.small-and-below() {
+  .header {
+    margin-bottom: 0;
+  }
+
   .faq-container {
+    margin-top: all.$spaceLarge;
     .left-side {
       width: 100%;
 

@@ -64,6 +64,7 @@
       font-size: all.$fontSize3;
       font-family: all.$fontFamilyBodyBold;
       color: all.$primaryDark;
+      text-align: center;
     }
   }
 }
@@ -80,6 +81,12 @@
 
 
 @include all.small-and-below() {
+  .milestones {
+    img {
+      width: 80%;
+    }
+  }
+
   .top-publication {
     div {
       width: 100%;

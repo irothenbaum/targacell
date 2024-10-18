@@ -27,6 +27,7 @@
     height: 2px;
     background: colors.$white;
     transition: width constants.$transition;
+    margin:0 auto;
   }
 
   &:hover:after {

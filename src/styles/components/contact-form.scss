@@ -56,6 +56,10 @@
   .contact-form-container {
     .form-row {
       align-items: flex-start;
+
+      & > div {
+        width: 100%;
+      }
     }
   }
 }

@@ -37,12 +37,6 @@
             </div>
         </div>
 
-        {%  embed "../components/contact-form.twig" with {form_name: "Investors Form"} %}
-            {%  block footer %}
-                <p class="summary-footnote">
-                    Executive Summary automatically emailed when you click "Send Message"
-                </p>
-            {%  endblock %}
-        {% endembed %}
+        {%  embed "../components/contact-form.twig" with {form_name: "Investors Form"} %}{% endembed %}
     </div>
 {% endblock %}

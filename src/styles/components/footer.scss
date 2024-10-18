@@ -17,8 +17,10 @@
 
     .nav {
       a {
+        display: inline-block;
         margin-right: all.$spaceSmall;
         @include all.hover-cta();
+        @include all.hover-underline();
       }
     }
 
@@ -34,11 +36,10 @@
         background-color: all.$primaryExtraLight;
         display: inline-block;
         font-size: all.$fontSize3;
-        margin-left: all.$spaceExtraSmall;
+        margin-left: all.$spaceMedium;
         @include all.hover-cta();
 
         &.poland {
-          margin-left: all.$spaceMedium;
           background-color: #b33237;
           position: relative;
 
@@ -82,6 +83,12 @@
 
 @include all.small-and-below {
   #page-footer {
+    .top-section {
+      .nav {
+        text-align: center;
+      }
+    }
+
     .bottom-section {
       img {
         height: 2rem;

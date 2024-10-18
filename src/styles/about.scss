@@ -8,14 +8,6 @@
   img {
     width: 40%;
     margin-left: all.$spaceMedium;
-
-    animation: gelatine 0.6s;
-
-    &:hover {
-      animation: none;
-      transition: transform all.$transition;
-      transform: scale(1.05, 1.05);
-    }
   }
 
   div {
@@ -87,6 +79,7 @@
     .text-over {
       position: relative;
       z-index: 2;
+      width: 18rem;
 
       h2 {
         padding-top: all.$spaceExtraLarge;
@@ -173,20 +166,14 @@
     margin-top: all.$spaceLarge;
     margin-bottom: all.$spaceExtraLarge;
     font-size: all.$fontSize2;
+    line-height: 1.2em;
 
     a {
+      display: inline-block;
       @include all.hover-underline();
     }
   }
 }
-
-@keyframes gelatine {
-  from, to { transform: scale(1, 1); }
-  25% { transform: scale(0.9, 1.1); }
-  50% { transform: scale(1.1, 0.9); }
-  75% { transform: scale(0.95, 1.05); }
-}
-
 
 @include all.small-and-below() {
   .intro-heart {
@@ -199,8 +186,12 @@
   .what-is-targacell {
     display: block;
 
-    & > .left {
+    & > div.left {
       padding-bottom: all.$spaceLarge;
+
+      .text-over {
+        width: auto;
+      }
     }
     & > div.right {
       padding: 0;

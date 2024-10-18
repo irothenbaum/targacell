@@ -58,3 +58,9 @@
     margin:0 auto;
   }
 }
+
+@include all.small-and-below {
+  .resource-header {
+    width: 100%;
+  }
+}
