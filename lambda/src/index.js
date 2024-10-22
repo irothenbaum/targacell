@@ -30,6 +30,7 @@ exports.handler = async (event) => {
     const mailOptions = {
       from: process.env.SENDER_EMAIL,
       to: process.env.TARGET_EMAIL,
+      cc: process.env.CC_EMAIL,
       subject: `New Targacell "${form_name}" Form Submission`,
       text: `
         Name: 

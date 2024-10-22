@@ -10,7 +10,6 @@
     margin-top: all.$spaceMedium;
     font-family: all.$fontFamilyBodyBold;
   }
-
 }
 
 .resources {
@@ -41,14 +40,21 @@
   p {
     text-transform: uppercase;
     color: all.$primaryDark;
-    margin-top: all.$spaceMedium;
+    margin-top: all.$spaceMediumLarge;
     font-family: all.$fontFamilyBodyBold;
   }
 
   a {
-    margin-top: all.$spaceSmall;
+    display: inline-block;
+    margin-top: all.$spaceExtraSmall;
     color: all.$darkGrey;
     font-style: italic;
+    transition: color all.$transition;
+    @include all.hover-underline(all.$primaryDark, 1px);
+
+    &:hover {
+      color: all.$primaryDark;
+    }
   }
 }
 

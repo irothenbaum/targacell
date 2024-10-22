@@ -19,13 +19,13 @@
   background-size: cover;
 }
 
-@mixin hover-underline {
+@mixin hover-underline($color: colors.$white, $height: 2px) {
   &:after {
     content: '';
     display: block;
     width: 0;
-    height: 2px;
-    background: colors.$white;
+    height: $height;
+    background: $color;
     transition: width constants.$transition;
     margin:0 auto;
   }

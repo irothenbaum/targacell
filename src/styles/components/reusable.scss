@@ -84,6 +84,38 @@
   }
 }
 
+a.zoom-image {
+  position: relative;
+  cursor: pointer;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+
+  &:after {
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    font-size: 1.6rem;
+    transform: scale(0.6);
+    border-radius: 20%;
+    background-color: transparent;
+    content: "\f00e";
+    position: absolute;
+    top: all.$spaceSmall;
+    right: all.$spaceSmall;
+    opacity: 0.3;
+    z-index: 2;
+    transition: all all.$transition;
+    box-shadow: 0 0 0 0 transparent;
+  }
+
+  &:hover:after {
+    opacity: 1;
+    transform: scale(1);
+    background-color: all.$white;
+    box-shadow: 0 0 0.4rem 0 all.$shadowSoft;
+  }
+}
+
 @keyframes wiggle-bounce {
   from, to { transform: scale(1, 1); }
   25% { transform: scale(0.9, 1.1); }

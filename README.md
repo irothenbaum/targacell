@@ -1,13 +1,26 @@
-## Designs
+# TargaCell website
 
-All Pages:
-https://www.dropbox.com/scl/fo/jvx5unhn3uwdup5jvvd4g/ABJieuckivMhzFhe6G9uKRg?dl=0&e=1&preview=TargaCell_Website_10Pages_29JULY2024.pdf&rlkey=zs2t6hkavjptypt5mf1ai6pdb&st=wbbik3pe
+## Environment
+All code (front end and back end) was developed using Node js v20x.
 
-Assets:
-https://www.dropbox.com/scl/fo/2v6zhk7mo7d7qq60abd9a/ACUQBTch9PICgPOgyoAAybk?rlkey=ii3s4do4v62smlsoxvre8xd08&e=1&st=snubs59p&dl=0
+## Frontend
+The front end is a static web site using FontAwesome, jQuery.
+The build tools are Sass, Twig, and custom compilation scripts that can be found in the `/scripts` folder.
 
-## Thing I need / notice:
+### Development
+The pages and components are stored in the `/src` directory. To test the site locally, run script `npm run build-site`
+which will compile the src files into the `/build` directory. Then simply open the `/build/index.html` file in a browser.
 
-- DouglasHeld_BIO.pdf missing
-- Missing First 3 Home page icons (Universal Delivery, Safe & Efficient, Stem Cell Delivery)
+### Deployment
+To deploy the front end, run the `/scripts/deploySite.js` node script.
 
+## Backend
+The backend is a single lambda function + API Gateway service designed to email the contact form data to the TargaCell team.
+
+### Development
+The backend script was written in Node js v20x and can be found in the `/lambda` directory.
+
+### Deployment
+To deploy the backend, enter the lambda directory and run `sh deploy.sh`. 
+This will package, upload, and deploy the contents of the `/lambda/src` directory to the AWS Lambda service.
+This script requires the `aws-cli` be configured and accessible from the command line.
