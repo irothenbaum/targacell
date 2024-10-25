@@ -36,16 +36,3 @@ html, body {
   max-width: all.$contentWidth;
 }
 
-.breadcrumbs {
-  width: 100%;
-  padding: all.$spaceMediumLarge;
-  background-color: all.$nearWhite;
-
-  a {
-    @include all.hover-cta();
-    &:after {
-      content: '>';
-      margin: 0 all.$spaceSmall;
-    }
-  }
-}

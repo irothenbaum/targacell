@@ -119,10 +119,13 @@
         flex: 1;
         gap: 0;
         flex-direction: column;
+        justify-content: space-evenly;
         margin-left: 0;
 
         font-size: all.$fontSize3;
         a {
+          padding: all.$spaceExtraExtraSmall;
+          flex: none;
           display: block;
           margin-left: 0;
           line-height: 1.1em;
