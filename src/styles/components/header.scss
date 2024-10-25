@@ -116,21 +116,26 @@
       align-items: center;
 
       .nav {
+        flex: 1;
+        gap: 0;
         flex-direction: column;
         margin-left: 0;
 
         font-size: all.$fontSize3;
         a {
-          margin-top: all.$spaceMedium;
+          display: block;
           margin-left: 0;
+          line-height: 1.1em;
         }
       }
 
       .contact {
-        margin-bottom: all.$spaceLarge;
+        flex-shrink: 0;
+        margin: 0;
 
         a {
           display: block;
+          margin-left: 0;
           margin-top: all.$spaceMedium;
           text-align: center;
         }
@@ -143,8 +148,8 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
       z-index: 1000;
 
       #mobile-header {

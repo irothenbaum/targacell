@@ -17,14 +17,14 @@ html, body {
   min-height: 100%;
   color: all.$bodyColor;
   background-color: all.$white;
+  height: 100%;
 
   &.nav-open {
-    height: 100vh;
     overflow: hidden;
 
     * {
-      max-width: 100vw;
-      max-height: 100vh;
+      max-width: 100%;
+      max-height: 100%;
       overflow: hidden;
     }
   }
