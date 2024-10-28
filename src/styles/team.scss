@@ -16,7 +16,7 @@
     @include all.flex-row();
 
     img, div {
-      flex: 1;
+      flex: none;
     }
 
     div {

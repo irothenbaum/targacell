@@ -79,6 +79,20 @@
     background-color: all.$primaryExtraDark;
     color: all.$primaryExtraLight;
   }
+
+  .attribution {
+    text-align: center;
+    font-size: all.$fontSize5;
+    padding: all.$spaceExtraSmall;
+    padding-top: 0;
+    background-color: all.$primaryExtraDark;
+    color: all.$primaryExtraLight;
+
+    a {
+      display: inline-block;
+      @include all.hover_underline();
+    }
+  }
 }
 
 @include all.small-and-below {
