@@ -16,7 +16,7 @@
     @include all.flex-row();
 
     img, div {
-      flex: none;
+      flex: 1;
     }
 
     div {
@@ -73,6 +73,10 @@
 @include all.small-and-below() {
   .section {
     &.cathy-and-robin {
+      img, div {
+        flex: none;
+      }
+
       & > div {
         margin-top: all.$spaceMedium;
         padding-left: 0;
